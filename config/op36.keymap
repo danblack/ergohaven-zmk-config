@@ -107,7 +107,7 @@
             label = "RU_TIL";
         };
 
-RU_LCB: RU_LCB {
+        RU_LCB: RU_LCB {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -119,9 +119,8 @@ RU_LCB: RU_LCB {
 
             label = "RU_LCB";
         };
-    };
 
-RU_LBR: RU_LBR {
+        RU_LBR: RU_LBR {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -133,9 +132,8 @@ RU_LBR: RU_LBR {
 
             label = "RU_LBR";
         };
-    };
 
-RU_RBR: RU_RBR {
+        RU_RBR: RU_RBR {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -147,9 +145,8 @@ RU_RBR: RU_RBR {
 
             label = "RU_RBR";
         };
-    };
 
-RU_RCB: RU_RCB {
+        RU_RCB: RU_RCB {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
