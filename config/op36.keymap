@@ -106,6 +106,61 @@
 
             label = "RU_TIL";
         };
+
+RU_LCB: RU_LCB {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp LS(LA(LC(LG(E))))>,
+                <&macro_tap_time 20>,
+                <&kp LS(LEFT_BRACKET)>,
+                <&macro_tap_time 20>,
+                <&kp LA(LC(LG(LS(R))))>;
+
+            label = "RU_LCB";
+        };
+    };
+
+RU_LBR: RU_LBR {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp LS(LA(LC(LG(E))))>,
+                <&macro_tap_time 20>,
+                <&kp LEFT_BRACKET>,
+                <&macro_tap_time 20>,
+                <&kp LA(LC(LG(LS(R))))>;
+
+            label = "RU_LBR";
+        };
+    };
+
+RU_RBR: RU_RBR {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp LS(LA(LC(LG(E))))>,
+                <&macro_tap_time 20>,
+                <&kp RIGHT_BRACKET>,
+                <&macro_tap_time 20>,
+                <&kp LA(LC(LG(LS(R))))>;
+
+            label = "RU_RBR";
+        };
+    };
+
+RU_RCB: RU_RCB {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp LS(LA(LC(LG(E))))>,
+                <&macro_tap_time 20>,
+                <&kp LS(RIGHT_BRACKET)>,
+                <&macro_tap_time 20>,
+                <&kp LA(LC(LG(LS(R))))>;
+
+            label = "RU_RCB";
+        };
     };
 
     keymap {
