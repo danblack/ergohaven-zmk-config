@@ -39,17 +39,72 @@
         };
     };
 
-    combos {
-        compatible = "zmk,combos";
+    combos { compatible = "zmk,combos"; };
 
-        kha {
-            bindings = <&kp LBKT>;
-            key-positions = <6 7>;
+    macros {
+        RU_CURRET: RU_CURET {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp LS(LA(LC(LG(E))))>,
+                <&macro_tap_time 20>,
+                <&kp LS(N6)>,
+                <&macro_tap_time 20>,
+                <&kp LA(LC(LG(LS(R))))>;
+
+            label = "RU_CURET";
         };
 
-        hrdsgn {
-            bindings = <&kp RBKT>;
-            key-positions = <7 8>;
+        RU_AMP: RU_AMP {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp LS(LA(LC(LG(E))))>,
+                <&macro_tap_time 20>,
+                <&kp LS(N7)>,
+                <&macro_tap_time 20>,
+                <&kp LA(LC(LG(LS(R))))>;
+
+            label = "RU_AMP";
+        };
+
+        RU_AST: RU_AST {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp LS(LA(LC(LG(E))))>,
+                <&macro_tap_time 20>,
+                <&kp LS(N8)>,
+                <&macro_tap_time 20>,
+                <&kp LA(LC(LG(LS(R))))>;
+
+            label = "RU_AST";
+        };
+
+        RU_AT: RU_AT {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp LS(LA(LC(LG(E))))>,
+                <&macro_tap_time 20>,
+                <&kp LS(NUMBER_2)>,
+                <&macro_tap_time 20>,
+                <&kp LA(LC(LG(LS(R))))>;
+
+            label = "RU_AT";
+        };
+
+        RU_TIL: RU_TIL {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp LS(LA(LC(LG(E))))>,
+                <&macro_tap_time 20>,
+                <&kp LS(GRAVE)>,
+                <&macro_tap_time 20>,
+                <&kp LA(LC(LG(LS(R))))>;
+
+            label = "RU_TIL";
         };
     };
 
@@ -70,20 +125,20 @@
         ENG {
             display-name = "English";
             bindings = <
-  &kp Q  &kp W  &kp E  &kp R       &kp T                                    &kp Y           &kp U             &kp I      &kp O    &kp P
-  &kp A  &kp S  &kp D  &kp F       &kp G                                    &kp H           &kp J             &kp K      &kp L    &kp SEMI
-  &kp Z  &kp X  &kp C  &kp V       &kp B                                    &kp N           &kp M             &kp COMMA  &kp DOT  &kp FSLH
-                       &kp ESCAPE  &kp SPACE  &kp LEFT_GUI    &kp LEFT_ALT  &kp LEFT_SHIFT  &kp LEFT_CONTROL
+  &kp Q  &kp W  &kp E  &kp R       &kp T                                   &kp Y           &kp U             &kp I      &kp O    &kp P
+  &kp A  &kp S  &kp D  &kp F       &kp G                                   &kp H           &kp J             &kp K      &kp L    &kp SEMI
+  &kp Z  &kp X  &kp C  &kp V       &kp B                                   &kp N           &kp M             &kp COMMA  &kp DOT  &kp FSLH
+                       &kp ESCAPE  &lt 3 SPACE  &kp LEFT_GUI    &lt 5 TAB  &kp LEFT_SHIFT  &kp LEFT_CONTROL
             >;
         };
 
         RUS {
             display-name = "Russian";
             bindings = <
-  &kp Q  &kp W  &kp E  &kp R       &kp T                                    &kp Y           &kp U             &kp I      &kp O    &kp P
-  &kp A  &kp S  &kp D  &kp F       &kp G                                    &kp H           &kp J             &kp K      &kp L    &kp SEMI
-  &kp Z  &kp X  &kp C  &kp V       &kp B                                    &kp N           &kp M             &kp COMMA  &kp DOT  &kp FSLH
-                       &kp ESCAPE  &kp SPACE  &kp LEFT_GUI    &kp LEFT_ALT  &kp LEFT_SHIFT  &kp LEFT_CONTROL
+  &kp Q  &kp W  &kp E  &kp R       &kp T                                      &kp Y           &kp U             &kp I      &kp O    &kp P
+  &kp A  &kp S  &kp D  &kp F       &kp G                                      &kp H           &kp J             &kp K      &kp L    &kp SEMI
+  &kp Z  &kp X  &kp C  &kp V       &kp B                                      &kp N           &kp M             &kp COMMA  &kp DOT  &kp FSLH
+                       &kp ESCAPE  &lt 6 SPACE  &kp LEFT_GUI    &kp LEFT_ALT  &kp LEFT_SHIFT  &kp LEFT_CONTROL
             >;
         };
 
@@ -112,6 +167,15 @@
         LSM_EN {
             bindings = <
   &kp LS(N6)            &kp LS(N7)        &kp LS(N8)        &kp LS(NUMBER_2)   &kp LS(GRAVE)                                   &none          &none  &none  &none  &none
+  &kp LS(LEFT_BRACKET)  &kp LEFT_BRACKET  &kp LS(NUMBER_5)  &kp RIGHT_BRACKET  &kp LS(RIGHT_BRACKET)                           &kp BACKSPACE  &none  &none  &none  &none
+  &trans                &kp LS(NUBS)      &kp LS(NUMBER_4)  &kp NUBS           &trans                                          &none          &none  &none  &none  &none
+                                                            &kp LS(NUMBER_3)   &kp LS(N1)             &kp LS(MINUS)    &trans  &none          &none
+            >;
+        };
+
+        LSM_RU {
+            bindings = <
+  &RU_CURRET            &RU_AMP           &RU_AST           &RU_AT             &RU_TIL                                         &none          &none  &none  &none  &none
   &kp LS(LEFT_BRACKET)  &kp LEFT_BRACKET  &kp LS(NUMBER_5)  &kp RIGHT_BRACKET  &kp LS(RIGHT_BRACKET)                           &kp BACKSPACE  &none  &none  &none  &none
   &trans                &kp LS(NUBS)      &kp LS(NUMBER_4)  &kp NUBS           &trans                                          &none          &none  &none  &none  &none
                                                             &kp LS(NUMBER_3)   &kp LS(N1)             &kp LS(MINUS)    &trans  &none          &none
