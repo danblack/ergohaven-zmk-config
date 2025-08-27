@@ -94,7 +94,7 @@
         RU_LESS: RU_LESS {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(LA(LC(LG(E)))) &kp LS(COMMA) &kp LS(LA(LC(LG(R))))>;
+            bindings = <&kp LS(LA(LC(LG(E)))) &kp LS(A) &kp LS(LA(LC(LG(R))))>;
             label = "RU_LESS";
         };
     };
