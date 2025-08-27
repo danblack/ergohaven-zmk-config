@@ -75,9 +75,9 @@
             #binding-cells = <1>;
             bindings =
                 <&kp LS(LA(LC(LG(E))))>,
-                <&macro_wait_time 20>,
+                <&macro_wait_time 200>,
                 <&macro_param_1to1 &kp MACRO_PLACEHOLDER>,
-                <&macro_wait_time 20>,
+                <&macro_wait_time 200>,
                 <&kp LA(LC(LG(LS(R))))>;
 
             label = "RUEN";
