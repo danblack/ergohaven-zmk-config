@@ -171,6 +171,19 @@
 
             label = "RU_PCT";
         };
+
+        RUEN: RUEN {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings =
+                <&kp LS(LA(LC(LG(E))))>,
+                <&macro_tap_time 20>,
+                <&macro_param_1to1 &kp MACRO_PLACEHOLDER>,
+                <&macro_tap_time 20>,
+                <&kp LA(LC(LG(LS(R))))>;
+
+            label = "RUEN";
+        };
     };
 
     keymap {
@@ -211,10 +224,10 @@
         RUS {
             display-name = "Russian";
             bindings = <
-  &kp Q  &kp W  &kp E  &kp R       &kp T                                      &kp Y           &kp U             &kp I      &kp O    &kp P
-  &kp A  &kp S  &kp D  &kp F       &kp G                                      &kp H           &kp J             &kp K      &kp L    &kp SEMI
-  &kp Z  &kp X  &kp C  &kp V       &kp B                                      &kp N           &kp M             &kp COMMA  &kp DOT  &kp FSLH
-                       &kp ESCAPE  &lt 4 SPACE  &kp LEFT_GUI    &kp LEFT_ALT  &kp LEFT_SHIFT  &kp LEFT_CONTROL
+  &kp Q  &kp W  &kp E  &kp R       &kp T                                        &kp Y           &kp U             &kp I      &kp O    &kp P
+  &kp A  &kp S  &kp D  &kp F       &kp G                                        &kp H           &kp J             &kp K      &kp L    &kp SEMI
+  &kp Z  &kp X  &kp C  &kp V       &kp B                                        &kp N           &kp M             &kp COMMA  &kp DOT  &kp FSLH
+                       &kp ESCAPE  &lt 4 SPACE  &kp LEFT_GUI    &lt 6 LEFT_ALT  &kp LEFT_SHIFT  &kp LEFT_CONTROL
             >;
         };
 
@@ -242,10 +255,10 @@
 
         LSM_RU {
             bindings = <
-  &RU_CURRET  &RU_AMP       &RU_AST           &RU_AT            &RU_TIL                              &none          &none  &none  &none  &none
-  &RU_LCB     &RU_LBR       &RU_PCT           &RU_RBR           &RU_RCB                              &kp BACKSPACE  &none  &none  &none  &none
-  &trans      &kp LS(NUBS)  &kp LS(NUMBER_4)  &kp NUBS          &trans                               &none          &none  &none  &none  &none
-                                              &kp LS(NUMBER_3)  &kp LS(N1)  &kp LS(MINUS)    &trans  &none          &none
+  &RUEN LS(N6)  &RUEN LS(N7)        &RUEN LS(N8)        &RUEN LS(NUMBER_2)   &RUEN LS(GRAVE)                           &none          &none  &none  &none  &none
+  &kp LS(N9)    &RUEN LEFT_BRACKET  &RUEN LS(NUMBER_5)  &RUEN RIGHT_BRACKET  &kp LS(N0)                                &kp BACKSPACE  &none  &none  &none  &none
+  &trans        &RUEN LS(NUBS)      &RUEN LS(NUMBER_4)  &RUEN NUBS           &trans                                    &none          &none  &none  &none  &to 0
+                                                        &RUEN LS(NUMBER_3)   &kp LS(N1)       &kp LS(MINUS)    &trans  &none          &none
             >;
         };
 
