@@ -42,7 +42,7 @@
     combos { compatible = "zmk,combos"; };
 
     macros {
-        RU_CURRET: RU_CURET {
+        RU_CURRET: RU_CURRET {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -52,7 +52,7 @@
                 <&macro_tap_time 20>,
                 <&kp LA(LC(LG(LS(R))))>;
 
-            label = "RU_CURET";
+            label = "RU_CURRET";
         };
 
         RU_AMP: RU_AMP {
@@ -158,6 +158,19 @@
 
             label = "RU_RCB";
         };
+
+        RU_PCT: RU_PCT {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp LS(LA(LC(LG(E))))>,
+                <&macro_tap_time 20>,
+                <&kp LS(NUMBER_5)>,
+                <&macro_tap_time 20>,
+                <&kp LA(LC(LG(LS(R))))>;
+
+            label = "RU_PCT";
+        };
     };
 
     keymap {
@@ -165,7 +178,7 @@
 
         KAN {
             bindings = <
-  &lt 4 Q  &kp W  &kp E  &kp R       &kp T                                    &kp Y           &kp U             &kp I      &kp O    &kp P
+  &lt 1 Q  &kp W  &kp E  &kp R       &kp T                                    &kp Y           &kp U             &kp I      &kp O    &kp P
   &kp A    &kp S  &kp D  &kp F       &kp G                                    &kp H           &kp J             &kp K      &kp L    &kp SEMI
   &kp Z    &kp X  &kp C  &kp V       &kp B                                    &kp N           &kp M             &kp COMMA  &kp DOT  &kp FSLH
                          &kp ESCAPE  &kp SPACE  &kp LEFT_GUI    &kp LEFT_ALT  &kp LEFT_SHIFT  &kp LEFT_CONTROL
@@ -174,13 +187,24 @@
             display-name = "Kanata";
         };
 
+        SETUP {
+            bindings = <
+  &none        &none  &none  &none   &none                    &bt BT_SEL 0  &bt BT_SEL 1         &bt BT_SEL 2       &bt BT_SEL 3        &bt BT_CLR
+  &none        &none  &none  &none   &none                    &out OUT_BLE  &hmr RCTRL C_VOL_DN  &hmr RSHFT C_MUTE  &hmr LALT C_VOL_UP  &kp RGUI
+  &bootloader  &none  &none  &none   &kp Z                    &out OUT_USB  &kp C_PREV           &kp C_PP           &kp C_NEXT          &studio_unlock
+                             &trans  &trans  &to 2    &trans  &trans        &trans
+            >;
+
+            display-name = "Setup";
+        };
+
         ENG {
             display-name = "English";
             bindings = <
   &kp Q  &kp W  &kp E  &kp R       &kp T                                          &kp Y           &kp U             &kp I      &kp O    &kp P
   &kp A  &kp S  &kp D  &kp F       &kp G                                          &kp H           &kp J             &kp K      &kp L    &kp SEMI
   &kp Z  &kp X  &kp C  &kp V       &kp B                                          &kp N           &kp M             &kp COMMA  &kp DOT  &kp FSLH
-                       &kp ESCAPE  &lt 3 SPACE  &lt 7 LEFT_GUI    &lt 5 LEFT_ALT  &kp LEFT_SHIFT  &kp LEFT_CONTROL
+                       &kp ESCAPE  &lt 4 SPACE  &lt 7 LEFT_GUI    &lt 5 LEFT_ALT  &kp LEFT_SHIFT  &kp LEFT_CONTROL
             >;
         };
 
@@ -190,7 +214,7 @@
   &kp Q  &kp W  &kp E  &kp R       &kp T                                      &kp Y           &kp U             &kp I      &kp O    &kp P
   &kp A  &kp S  &kp D  &kp F       &kp G                                      &kp H           &kp J             &kp K      &kp L    &kp SEMI
   &kp Z  &kp X  &kp C  &kp V       &kp B                                      &kp N           &kp M             &kp COMMA  &kp DOT  &kp FSLH
-                       &kp ESCAPE  &lt 6 SPACE  &kp LEFT_GUI    &kp LEFT_ALT  &kp LEFT_SHIFT  &kp LEFT_CONTROL
+                       &kp ESCAPE  &lt 4 SPACE  &kp LEFT_GUI    &kp LEFT_ALT  &kp LEFT_SHIFT  &kp LEFT_CONTROL
             >;
         };
 
@@ -205,22 +229,11 @@
             display-name = "Navigation";
         };
 
-        SETUP {
-            bindings = <
-  &none        &none  &none  &none   &none                    &bt BT_SEL 0  &bt BT_SEL 1         &bt BT_SEL 2       &bt BT_SEL 3        &bt BT_CLR
-  &none        &none  &none  &none   &none                    &out OUT_BLE  &hmr RCTRL C_VOL_DN  &hmr RSHFT C_MUTE  &hmr LALT C_VOL_UP  &kp RGUI
-  &bootloader  &none  &none  &none   &kp Z                    &out OUT_USB  &kp C_PREV           &kp C_PP           &kp C_NEXT          &studio_unlock
-                             &trans  &trans  &to 1    &trans  &trans        &trans
-            >;
-
-            display-name = "Setup";
-        };
-
         LSM_EN {
             bindings = <
   &kp LS(N6)            &kp LS(N7)        &kp LS(N8)        &kp LS(NUMBER_2)   &kp LS(GRAVE)                                   &none          &none  &none  &none  &none
   &kp LS(LEFT_BRACKET)  &kp LEFT_BRACKET  &kp LS(NUMBER_5)  &kp RIGHT_BRACKET  &kp LS(RIGHT_BRACKET)                           &kp BACKSPACE  &none  &none  &none  &none
-  &trans                &kp LS(NUBS)      &kp LS(NUMBER_4)  &kp NUBS           &trans                                          &none          &none  &none  &none  &tog 0
+  &trans                &kp LS(NUBS)      &kp LS(NUMBER_4)  &kp NUBS           &trans                                          &none          &none  &none  &none  &to 0
                                                             &kp LS(NUMBER_3)   &kp LS(N1)             &kp LS(MINUS)    &trans  &none          &none
             >;
 
@@ -229,10 +242,10 @@
 
         LSM_RU {
             bindings = <
-  &RU_CURRET            &RU_AMP           &RU_AST           &RU_AT             &RU_TIL                                         &none          &none  &none  &none  &none
-  &kp LS(LEFT_BRACKET)  &kp LEFT_BRACKET  &kp LS(NUMBER_5)  &kp RIGHT_BRACKET  &kp LS(RIGHT_BRACKET)                           &kp BACKSPACE  &none  &none  &none  &none
-  &trans                &kp LS(NUBS)      &kp LS(NUMBER_4)  &kp NUBS           &trans                                          &none          &none  &none  &none  &none
-                                                            &kp LS(NUMBER_3)   &kp LS(N1)             &kp LS(MINUS)    &trans  &none          &none
+  &RU_CURRET  &RU_AMP       &RU_AST           &RU_AT            &RU_TIL                              &none          &none  &none  &none  &none
+  &RU_LCB     &RU_LBR       &RU_PCT           &RU_RBR           &RU_RCB                              &kp BACKSPACE  &none  &none  &none  &none
+  &trans      &kp LS(NUBS)  &kp LS(NUMBER_4)  &kp NUBS          &trans                               &none          &none  &none  &none  &none
+                                              &kp LS(NUMBER_3)  &kp LS(N1)  &kp LS(MINUS)    &trans  &none          &none
             >;
         };
 
