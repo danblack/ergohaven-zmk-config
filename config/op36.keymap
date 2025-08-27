@@ -117,7 +117,7 @@
             bindings = <
   &none        &none  &none  &none   &none                    &bt BT_SEL 0  &bt BT_SEL 1         &bt BT_SEL 2       &bt BT_SEL 3        &bt BT_CLR
   &none        &none  &none  &none   &none                    &out OUT_BLE  &hmr RCTRL C_VOL_DN  &hmr RSHFT C_MUTE  &hmr LALT C_VOL_UP  &kp RGUI
-  &bootloader  &none  &none  &none   &none                    &out OUT_USB  &kp C_PREV           &kp C_PP           &kp C_NEXT          &studio_unlock
+  &bootloader  &none  &none  &none   &kp Z                    &out OUT_USB  &kp C_PREV           &kp C_PP           &kp C_NEXT          &studio_unlock
                              &trans  &trans  &to 2    &trans  &trans        &trans
             >;
 
