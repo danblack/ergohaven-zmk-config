@@ -10,6 +10,10 @@
     require-prior-idle-ms = <125>;
 };
 
+&sk { release-after-ms = <2000>; };
+
+&sl { release-after-ms = <2000>; };
+
 / {
     behaviors {
         hml: home_row_mod_left {
@@ -161,10 +165,10 @@
 
         LSM_RU {
             bindings = <
-  &RUEN LS(N6)          &RUEN LS(N7)         &RUEN LS(N8)        &RUEN LS(NUMBER_2)   &RUEN LS(GRAVE)                                &none          &none  &none  &none  &none
-  &kp LS(LEFT_BRACKET)  &RUEN LEFT_BRACKET   &RUEN LS(NUMBER_5)  &RUEN RIGHT_BRACKET  &kp LS(RIGHT_BRACKET)                          &kp BACKSPACE  &none  &none  &none  &none
-  &trans                &RUEN LS(BACKSLASH)  &RUEN LS(NUMBER_4)  &RUEN BACKSLASH      &trans                                         &none          &none  &none  &none  &to 0
-                                                                 &RUEN LS(NUMBER_3)   &kp LS(N1)             &kp LS(MINUS)    &none  &none          &none
+  &RUEN LS(N6)            &RUEN LS(N7)         &RUEN LS(N8)        &RUEN LS(NUMBER_2)   &RUEN LS(GRAVE)                                  &none          &none  &none  &none  &none
+  &RUEN LS(LEFT_BRACKET)  &RUEN LEFT_BRACKET   &RUEN LS(NUMBER_5)  &RUEN RIGHT_BRACKET  &RUEN LS(RIGHT_BRACKET)                          &kp BACKSPACE  &none  &none  &none  &none
+  &none                   &RUEN LS(BACKSLASH)  &RUEN LS(NUMBER_4)  &RUEN BACKSLASH      &none                                            &none          &none  &none  &none  &to 0
+                                                                   &RUEN LS(NUMBER_3)   &kp LS(N1)               &kp LS(MINUS)    &none  &none          &none
             >;
         };
 
