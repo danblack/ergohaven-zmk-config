@@ -74,11 +74,19 @@
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings =
-                <&kp LS(LA(LC(LG(E))))>,
-                <&macro_wait_time 200>,
+                <&macro_press>,
+                <&kp LEFT_SHIFT &kp LEFT_ALT &kp LEFT_CONTROL &kp LEFT_GUI &kp R>,
+                <&macro_wait_time 20>,
+                <&macro_release>,
+                <&kp R &kp LEFT_GUI &kp LEFT_CONTROL &kp LEFT_ALT &kp LEFT_SHIFT>,
+                <&macro_tap>,
                 <&macro_param_1to1 &kp MACRO_PLACEHOLDER>,
-                <&macro_wait_time 200>,
-                <&kp LA(LC(LG(LS(R))))>;
+                <&macro_wait_time 20>,
+                <&macro_press>,
+                <&kp LEFT_SHIFT &kp LEFT_ALT &kp LEFT_CONTROL &kp LEFT_GUI &kp E>,
+                <&macro_wait_time 20>,
+                <&macro_release>,
+                <&kp E &kp LEFT_GUI &kp LEFT_CONTROL &kp LEFT_ALT &kp LEFT_SHIFT>;
 
             label = "RUEN";
         };
