@@ -135,10 +135,10 @@
         RUS {
             display-name = "Russian";
             bindings = <
-  &kp Q  &kp W  &kp E  &kp R        &mt NUBS T                                         &kp Y                &kp U                  &mt O I    &kp P    &kp RIGHT_BRACKET
-  &kp A  &kp S  &kp D  &kp F        &kp G                                              &kp H                &kp J                  &kp K      &kp L    &kp SEMI
-  &kp Z  &kp X  &kp C  &kp V        &kp B                                              &kp N                &mt RIGHT_BRACKET M    &kp COMMA  &kp DOT  &kp SQT
-                       &mosl 12 13  &lt 4 SPACE  &mosk 8 LEFT_GUI    &mosk 6 LEFT_ALT  &mosk 10 LEFT_SHIFT  &mosk 11 LEFT_CONTROL
+  &kp Q  &kp W  &kp E  &kp R        &mt BACKSLASH T                                        &kp Y                &kp U                  &mt O I    &kp P    &kp LEFT_BRACKET
+  &kp A  &kp S  &kp D  &kp F        &kp G                                                  &kp H                &kp J                  &kp K      &kp L    &kp SEMI
+  &kp Z  &kp X  &kp C  &kp V        &kp B                                                  &kp N                &mt RIGHT_BRACKET M    &kp COMMA  &kp DOT  &kp SQT
+                       &mosl 12 13  &lt 4 SPACE      &mosk 8 LEFT_GUI    &mosk 6 LEFT_ALT  &mosk 10 LEFT_SHIFT  &mosk 11 LEFT_CONTROL
             >;
         };
 
