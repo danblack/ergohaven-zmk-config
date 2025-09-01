@@ -99,7 +99,7 @@
         TO_EN_UP: TO_EN_UP {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(LG(LC(LA(E)))) &to 4>;
+            bindings = <&kp LS(LG(LC(LA(E)))) &to 1>;
             label = "TO_EN_UP";
         };
     };
