@@ -85,7 +85,7 @@
         TO_RU: TO_RU {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(LG(LC(LA(R)))) &to 1>;
+            bindings = <&kp LS(LG(LC(LA(R)))) &to 2>;
             label = "TO_RU";
         };
 
@@ -99,7 +99,7 @@
         TO_EN_UP: TO_EN_UP {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(LG(LC(LA(E)))) &to 15>;
+            bindings = <&kp LS(LG(LC(LA(E)))) &to 4>;
             label = "TO_EN_UP";
         };
     };
@@ -110,20 +110,30 @@
         ENG {
             display-name = "English";
             bindings = <
-  &kp Q  &kp W  &kp E  &kp R        &kp T                                              &kp Y               &kp U                 &kp I      &kp O    &kp P
-  &kp A  &kp S  &kp D  &kp F        &kp G                                              &kp H               &kp J                 &kp K      &kp L    &kp SEMI
-  &kp Z  &kp X  &kp C  &kp V        &kp B                                              &kp N               &kp M                 &kp COMMA  &kp DOT  &kp FSLH
-                       &mosl 10 11  &lt 2 SPACE  &mosk 5 LEFT_GUI    &mosk 3 LEFT_ALT  &mosk 7 LEFT_SHIFT  &mosk 9 LEFT_CONTROL
+  &kp Q  &kp W  &kp E  &kp R        &kp T                                              &kp Y               &kp U                  &kp I      &kp O    &kp P
+  &kp A  &kp S  &kp D  &kp F        &kp G                                              &kp H               &kp J                  &kp K      &kp L    &kp SEMI
+  &kp Z  &kp X  &kp C  &kp V        &kp B                                              &kp N               &kp M                  &kp COMMA  &kp DOT  &kp FSLH
+                       &mosl 11 12  &lt 3 SPACE  &mosk 6 LEFT_GUI    &mosk 5 LEFT_ALT  &mosk 8 LEFT_SHIFT  &mosk 10 LEFT_CONTROL
+            >;
+        };
+
+        ENG_UP {
+            display-name = "English Uppercase";
+            bindings = <
+  &kp LS(Q)  &kp LS(W)  &kp LS(E)  &kp LS(R)    &kp LS(T)                                          &kp LS(Y)           &kp LS(U)              &kp LS(I)  &kp LS(O)  &kp LS(P)
+  &kp LS(A)  &kp LS(S)  &kp LS(D)  &kp LS(F)    &kp LS(G)                                          &kp LS(H)           &kp LS(J)              &kp LS(K)  &kp LS(L)  &TO_RU
+  &kp LS(Z)  &kp LS(X)  &kp LS(C)  &kp LS(V)    &kp LS(B)                                          &kp LS(N)           &kp LS(M)              &TO_RU     &TO_RU     &TO_RU
+                                   &mosl 11 12  &lt 3 SPACE  &mosk 6 LEFT_GUI    &mosk 5 LEFT_ALT  &mosk 8 LEFT_SHIFT  &mosk 10 LEFT_CONTROL
             >;
         };
 
         RUS {
             display-name = "Russian";
             bindings = <
-  &kp Q  &kp W  &kp E  &kp R        &mt BACKSLASH T                                        &kp Y               &kp U                 &mt O I    &kp P    &kp LEFT_BRACKET
-  &kp A  &kp S  &kp D  &kp F        &kp G                                                  &kp H               &kp J                 &kp K      &kp L    &kp SEMI
-  &kp Z  &kp X  &kp C  &kp V        &kp B                                                  &kp N               &mt RIGHT_BRACKET M   &kp COMMA  &kp DOT  &kp SQT
-                       &mosl 10 11  &lt 2 SPACE      &mosk 6 LEFT_GUI    &mosk 4 LEFT_ALT  &mosk 8 LEFT_SHIFT  &mosk 9 LEFT_CONTROL
+  &kp Q  &kp W  &kp E  &kp R        &mt BACKSLASH T                                        &kp Y               &kp U                  &mt O I    &kp P    &kp LEFT_BRACKET
+  &kp A  &kp S  &kp D  &kp F        &kp G                                                  &kp H               &kp J                  &kp K      &kp L    &kp SEMI
+  &kp Z  &kp X  &kp C  &kp V        &kp B                                                  &kp N               &mt RIGHT_BRACKET M    &kp COMMA  &kp DOT  &kp SQT
+                       &mosl 11 12  &lt 3 SPACE      &mosk 7 LEFT_GUI    &mosk 5 LEFT_ALT  &mosk 9 LEFT_SHIFT  &mosk 10 LEFT_CONTROL
             >;
         };
 
@@ -131,7 +141,7 @@
             bindings = <
   &kp LG(LS(Z))     &kp LG(X)       &kp LG(C)     &kp LG(V)         &kp LC(LS(V))                    &none          &kp HOME        &kp UP      &kp END     &kp PAGE_UP
   &kp LEFT_CONTROL  &kp LEFT_SHIFT  &kp LEFT_ALT  &kp LEFT_GUI      &kp LG(Z)                        &kp BACKSPACE  &kp LEFT_ARROW  &kp DOWN    &kp RIGHT   &kp PAGE_DOWN
-  &to 12            &none           &kp LG(A)     &kp LEFT_CONTROL  &none                            &kp CAPSLOCK   &to 15          &kp ESCAPE  &kp DELETE  &none
+  &to 13            &none           &kp LG(A)     &kp LEFT_CONTROL  &none                            &kp CAPSLOCK   &TO_EN_UP       &kp ESCAPE  &kp DELETE  &none
                                                   &none             &none          &none    &kp TAB  &kp ENTER      &none
             >;
 
@@ -142,7 +152,7 @@
             bindings = <
   &kp LS(N6)            &kp LS(N7)         &kp LS(N8)        &kp LS(NUMBER_2)   &kp LS(GRAVE)                                  &none          &none  &none  &none  &none
   &kp LS(LEFT_BRACKET)  &kp LEFT_BRACKET   &kp LS(NUMBER_5)  &kp RIGHT_BRACKET  &kp LS(RIGHT_BRACKET)                          &kp BACKSPACE  &none  &none  &none  &none
-  &none                 &kp LS(BACKSLASH)  &kp LS(NUMBER_4)  &kp BACKSLASH      &none                                          &none          &none  &none  &none  &to 13
+  &none                 &kp LS(BACKSLASH)  &kp LS(NUMBER_4)  &kp BACKSLASH      &none                                          &none          &none  &none  &none  &to 14
                                                              &kp LS(NUMBER_3)   &kp LS(N1)             &kp LS(MINUS)    &none  &none          &none
             >;
 
@@ -153,7 +163,7 @@
             bindings = <
   &RUEN LS(N6)            &RUEN LS(N7)         &RUEN LS(N8)        &RUEN LS(NUMBER_2)   &RUEN LS(GRAVE)                                  &none          &none  &none  &none  &none
   &RUEN LS(LEFT_BRACKET)  &RUEN LEFT_BRACKET   &RUEN LS(NUMBER_5)  &RUEN RIGHT_BRACKET  &RUEN LS(RIGHT_BRACKET)                          &kp BACKSPACE  &none  &none  &none  &none
-  &none                   &RUEN LS(BACKSLASH)  &RUEN LS(NUMBER_4)  &RUEN BACKSLASH      &none                                            &none          &none  &none  &none  &to 13
+  &none                   &RUEN LS(BACKSLASH)  &RUEN LS(NUMBER_4)  &RUEN BACKSLASH      &none                                            &none          &none  &none  &none  &to 14
                                                                    &RUEN LS(NUMBER_3)   &kp LS(N1)               &kp LS(MINUS)    &none  &none          &none
             >;
         };
@@ -232,7 +242,7 @@
 
         KAN {
             bindings = <
-  &lt 14 Q  &kp W  &kp E  &kp R       &kp T                                    &kp Y           &kp U             &kp I      &kp O    &kp P
+  &lt 15 Q  &kp W  &kp E  &kp R       &kp T                                    &kp Y           &kp U             &kp I      &kp O    &kp P
   &kp A     &kp S  &kp D  &kp F       &kp G                                    &kp H           &kp J             &kp K      &kp L    &kp SEMI
   &kp Z     &kp X  &kp C  &kp V       &kp B                                    &kp N           &kp M             &kp COMMA  &kp DOT  &kp FSLH
                           &kp ESCAPE  &kp SPACE  &kp LEFT_GUI    &kp LEFT_ALT  &kp LEFT_SHIFT  &kp LEFT_CONTROL
@@ -250,16 +260,6 @@
             >;
 
             display-name = "Setup";
-        };
-
-        EN_UP {
-            display-name = "English Uppercase";
-            bindings = <
-  &kp LS(Q)  &kp LS(W)  &kp LS(E)  &kp LS(R)    &kp LS(T)                                          &kp LS(Y)           &kp LS(U)             &kp LS(I)  &kp LS(O)  &kp LS(P)
-  &kp LS(A)  &kp LS(S)  &kp LS(D)  &kp LS(F)    &kp LS(G)                                          &kp LS(H)           &kp LS(J)             &kp LS(K)  &kp LS(L)  &TO_RU
-  &kp LS(Z)  &kp LS(X)  &kp LS(C)  &kp LS(V)    &kp LS(B)                                          &kp LS(N)           &kp LS(M)             &TO_RU     &TO_RU     &TO_RU
-                                   &mosl 10 11  &lt 2 SPACE  &mosk 5 LEFT_GUI    &mosk 3 LEFT_ALT  &mosk 7 LEFT_SHIFT  &mosk 9 LEFT_CONTROL
-            >;
         };
     };
 };
