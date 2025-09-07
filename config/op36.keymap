@@ -28,6 +28,7 @@
 
             hold-trigger-key-positions = <5 6 7 8 9 15 16 17 18 19 25 26 27 28 29 33 34 35>;
             hold-trigger-on-release;
+            retro-tap;
         };
 
         hmr: home_row_mod_right {
@@ -41,6 +42,7 @@
 
             hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 20 21 22 23 24 30 31 32>;
             hold-trigger-on-release;
+            retro-tap;
         };
 
         mosk: mosk {
@@ -69,6 +71,16 @@
             hold-trigger-key-positions = <5 6 7 8 9 15 16 17 18 19 25 26 27 28 29 33 34 35>;
             hold-trigger-on-release;
             label = "MOSL";
+        };
+
+        ru_p_as_en_o: ru_p_as_en_o {
+            compatible = "zmk,behavior-mod-morph";
+            label = "RU_P_AS_EN_O";
+            bindings = <&kp P>, <&kp O>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL|MOD_LSFT|MOD_LALT|MOD_LGUI)>;
+            keep-mods = <(MOD_LCTL|MOD_LSFT|MOD_LALT|MOD_LGUI)>;
         };
     };
 
@@ -110,10 +122,10 @@
         ENG {
             display-name = "English";
             bindings = <
-  &kp Q  &kp W  &kp E  &kp R        &kp T                                              &kp Y               &kp U                  &kp I      &kp O    &kp P
-  &kp A  &kp S  &kp D  &kp F        &kp G                                              &kp H               &kp J                  &kp K      &kp L    &kp SEMI
-  &kp Z  &kp X  &kp C  &kp V        &kp B                                              &kp N               &kp M                  &kp COMMA  &kp DOT  &kp FSLH
-                       &mosl 11 12  &lt 3 SPACE  &mosk 6 LEFT_GUI    &mosk 4 LEFT_ALT  &mosk 8 LEFT_SHIFT  &mosk 10 LEFT_CONTROL
+  &kp Q                &kp W              &kp E            &kp R                &kp T                                              &kp Y               &kp U                  &kp I            &kp O              &kp P
+  &hml LEFT_CONTROL A  &hml LEFT_SHIFT S  &hml LEFT_ALT D  &hml LEFT_GUI F      &kp G                                              &kp H               &hmr LEFT_GUI J        &hmr LEFT_ALT K  &hmr LEFT_SHIFT L  &hmr LEFT_CONTROL SEMI
+  &kp Z                &kp X              &kp C            &hml LEFT_CONTROL V  &kp B                                              &kp N               &hmr LEFT_CONTROL M    &kp COMMA        &kp DOT            &kp FSLH
+                                                           &mosl 11 12          &lt 3 SPACE  &mosk 6 LEFT_GUI    &mosk 4 LEFT_ALT  &mosk 8 LEFT_SHIFT  &mosk 10 LEFT_CONTROL
             >;
         };
 
@@ -130,7 +142,7 @@
         RUS {
             display-name = "Russian";
             bindings = <
-  &kp Q  &kp W  &kp E  &kp R        &mt BACKSLASH T                                        &kp Y               &kp U                  &mt O I    &kp P    &kp LEFT_BRACKET
+  &kp Q  &kp W  &kp E  &kp R        &mt BACKSLASH T                                        &kp Y               &kp U                  &gresc     &kp P    &kp LEFT_BRACKET
   &kp A  &kp S  &kp D  &kp F        &kp G                                                  &kp H               &kp J                  &kp K      &kp L    &kp SEMI
   &kp Z  &kp X  &kp C  &kp V        &kp B                                                  &kp N               &mt RIGHT_BRACKET M    &kp COMMA  &kp DOT  &kp SQT
                        &mosl 11 12  &lt 3 SPACE      &mosk 7 LEFT_GUI    &mosk 5 LEFT_ALT  &mosk 9 LEFT_SHIFT  &mosk 10 LEFT_CONTROL
