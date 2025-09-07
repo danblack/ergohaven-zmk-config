@@ -142,7 +142,7 @@
         RUS {
             display-name = "Russian";
             bindings = <
-  &kp Q  &kp W  &kp E  &kp R        &mt BACKSLASH T                                        &kp Y               &kp U                  &gresc     &kp P    &kp LEFT_BRACKET
+  &kp Q  &kp W  &kp E  &kp R        &mt BACKSLASH T                                        &kp Y               &kp U                  &mt O I    &kp P    &kp LEFT_BRACKET
   &kp A  &kp S  &kp D  &kp F        &kp G                                                  &kp H               &kp J                  &kp K      &kp L    &kp SEMI
   &kp Z  &kp X  &kp C  &kp V        &kp B                                                  &kp N               &mt RIGHT_BRACKET M    &kp COMMA  &kp DOT  &kp SQT
                        &mosl 11 12  &lt 3 SPACE      &mosk 7 LEFT_GUI    &mosk 5 LEFT_ALT  &mosk 9 LEFT_SHIFT  &mosk 10 LEFT_CONTROL
