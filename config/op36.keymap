@@ -73,10 +73,20 @@
             label = "MOSL";
         };
 
-        ru_p_as_en_o: ru_p_as_en_o {
+        ru_z_as_en_o: ru_z_as_en_o {
             compatible = "zmk,behavior-mod-morph";
-            label = "RU_P_AS_EN_O";
+            label = "RU_Z_AS_EN_O";
             bindings = <&kp P>, <&kp O>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL|MOD_LSFT|MOD_LALT|MOD_LGUI)>;
+            keep-mods = <(MOD_LCTL|MOD_LSFT|MOD_LALT|MOD_LGUI)>;
+        };
+
+        ru_h_as_en_p: ru_h_as_en_p {
+            compatible = "zmk,behavior-mod-morph";
+            label = "RU_H_AS_EN_P";
+            bindings = <&kp LEFT_BRACKET>, <&kp P>;
 
             #binding-cells = <0>;
             mods = <(MOD_LCTL|MOD_LSFT|MOD_LALT|MOD_LGUI)>;
