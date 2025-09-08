@@ -70,6 +70,36 @@
             hold-trigger-on-release;
             label = "MOSL";
         };
+
+        ru_sh: ru_sh {
+            compatible = "zmk,behavior-mod-morph";
+            label = "RU_SH";
+            bindings = <&kp I>, <&kp O>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LALT)>;
+            keep-mods = <(MOD_LSFT)>;
+        };
+
+        ru_mz: ru_mz {
+            compatible = "zmk,behavior-mod-morph";
+            label = "RU_MZ";
+            bindings = <&kp M>, <&kp RIGHT_BRACKET>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LALT)>;
+            keep-mods = <(MOD_LSFT)>;
+        };
+
+        ru_e: ru_e {
+            compatible = "zmk,behavior-mod-morph";
+            label = "RU_E";
+            bindings = <&kp T>, <&kp BACKSLASH>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LALT)>;
+            keep-mods = <(MOD_LSFT)>;
+        };
     };
 
     combos { compatible = "zmk,combos"; };
@@ -130,10 +160,10 @@
         RUS {
             display-name = "Russian";
             bindings = <
-  &kp Q  &kp W  &kp E  &kp R        &mt BACKSLASH T                                        &kp Y               &kp U                  &mt O I    &kp P    &kp LEFT_BRACKET
-  &kp A  &kp S  &kp D  &kp F        &kp G                                                  &kp H               &kp J                  &kp K      &kp L    &kp SEMI
-  &kp Z  &kp X  &kp C  &kp V        &kp B                                                  &kp N               &mt RIGHT_BRACKET M    &kp COMMA  &kp DOT  &kp SQT
-                       &mosl 11 12  &lt 3 SPACE      &mosk 7 LEFT_GUI    &mosk 5 LEFT_ALT  &mosk 9 LEFT_SHIFT  &mosk 10 LEFT_CONTROL
+  &kp Q  &kp W  &kp E  &kp R        &ru_e                                              &kp Y               &kp U                  &ru_sh     &kp P    &kp LEFT_BRACKET
+  &kp A  &kp S  &kp D  &kp F        &kp G                                              &kp H               &kp J                  &kp K      &kp L    &kp SEMI
+  &kp Z  &kp X  &kp C  &kp V        &kp B                                              &kp N               &ru_mz                 &kp COMMA  &kp DOT  &kp SQT
+                       &mosl 11 12  &lt 3 SPACE  &mosk 7 LEFT_GUI    &mosk 5 LEFT_ALT  &mosk 9 LEFT_SHIFT  &mosk 10 LEFT_CONTROL
             >;
         };
 
