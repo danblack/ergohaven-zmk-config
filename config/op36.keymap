@@ -318,10 +318,10 @@
         SHOTCUTS {
             display-name = "Shortcuts";
             bindings = <
-  &kp Q  &kp W  &kp E  &kp R  &kp T                  &kp Y  &kp U  &kp I      &kp O    &kp P
-  &kp A  &kp S  &kp D  &kp F  &kp G                  &kp H  &kp J  &kp K      &kp L    &kp SEMI
-  &kp Z  &kp X  &kp C  &kp V  &kp B                  &kp N  &kp M  &kp COMMA  &kp DOT  &kp FSLH
-                       &none  &none  &none    &none  &none  &none
+  &kp Q                &kp W              &kp E            &kp R            &kp T                  &kp Y  &kp U            &kp I            &kp O              &kp P
+  &hml LEFT_CONTROL A  &hml LEFT_SHIFT S  &hml LEFT_ALT D  &hml LEFT_GUI F  &kp G                  &kp H  &hmr LEFT_GUI J  &hmr LEFT_ALT K  &hmr LEFT_SHIFT L  &hmr LEFT_CONTROL SEMI
+  &kp Z                &kp X              &kp C            &kp V            &kp B                  &kp N  &kp M            &kp COMMA        &kp DOT            &kp FSLH
+                                                           &none            &none  &none    &none  &none  &none
             >;
         };
     };
