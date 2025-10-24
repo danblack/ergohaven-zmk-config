@@ -141,6 +141,18 @@
             bindings = <&kp LS(LG(LC(LA(E)))) &to 1>;
             label = "TO_EN_UP";
         };
+
+        scl: shortcut_mod {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings =
+                <&macro_press>,
+                <&mo 16 &macro_param_1to1 &kp MACRO_PLACEHOLDER>,
+                <&macro_release>,
+                <&mo 16 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+
+            label = "SHORTCUT_MOD";
+        };
     };
 
     keymap {
@@ -209,10 +221,10 @@
 
         RSM_EN {
             bindings = <
-  &none  &none  &none  &none            &none                   &kp LS(COMMA)  &kp DQT       &kp LS(N1)  &kp GRAVE         &none
-  &none  &none  &none  &ml 16 LEFT_GUI  &none                   &kp BACKSPACE  &kp COLON     &kp EQUAL   &kp SINGLE_QUOTE  &kp SEMI
-  &none  &none  &none  &none            &none                   &kp LS(DOT)    &kp LS(FSLH)  &kp COMMA   &kp DOT           &kp FSLH
-                       &none            &none  &none    &TO_RU  &TO_EN         &none
+  &none  &none  &none  &none          &none                   &kp LS(COMMA)  &kp DQT       &kp LS(N1)  &kp GRAVE         &none
+  &none  &none  &none  &scl LEFT_GUI  &none                   &kp BACKSPACE  &kp COLON     &kp EQUAL   &kp SINGLE_QUOTE  &kp SEMI
+  &none  &none  &none  &none          &none                   &kp LS(DOT)    &kp LS(FSLH)  &kp COMMA   &kp DOT           &kp FSLH
+                       &none          &none  &none    &TO_RU  &TO_EN         &none
             >;
         };
 
@@ -304,10 +316,10 @@
         SHOTCUTS {
             display-name = "Shortcuts";
             bindings = <
-  &kp Q  &kp W  &kp E  &kp R   &kp T                  &kp Y  &kp U  &kp I      &kp O    &kp P
-  &kp A  &kp S  &kp D  &trans  &kp G                  &kp H  &kp J  &kp K      &kp L    &kp SEMI
-  &kp Z  &kp X  &kp C  &kp V   &kp B                  &kp N  &kp M  &kp COMMA  &kp DOT  &kp FSLH
-                       &none   &none  &none    &none  &none  &none
+  &kp Q  &kp W  &kp E  &kp R  &kp T                  &kp Y  &kp U  &kp I      &kp O    &kp P
+  &kp A  &kp S  &kp D  &kp F  &kp G                  &kp H  &kp J  &kp K      &kp L    &kp SEMI
+  &kp Z  &kp X  &kp C  &kp V  &kp B                  &kp N  &kp M  &kp COMMA  &kp DOT  &kp FSLH
+                       &none  &none  &none    &none  &none  &none
             >;
         };
     };
