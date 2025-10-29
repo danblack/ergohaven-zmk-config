@@ -203,9 +203,9 @@
 
         LSM_EN {
             bindings = <
-  &kp LS(N6)            &kp LS(N7)         &kp LS(N8)        &kp LS(NUMBER_2)   &kp LS(GRAVE)                                  &none          &none          &none          &none            &none
-  &kp LS(LEFT_BRACKET)  &kp LEFT_BRACKET   &kp LS(NUMBER_5)  &kp RIGHT_BRACKET  &kp LS(RIGHT_BRACKET)                          &kp BACKSPACE  &scl LEFT_GUI  &scl LEFT_ALT  &scl LEFT_SHIFT  &scl LEFT_CONTROL
-  &none                 &kp LS(BACKSLASH)  &kp LS(NUMBER_4)  &kp BACKSLASH      &none                                          &none          &none          &none          &none            &to 14
+  &kp LS(N6)            &kp LS(N7)         &kp LS(N8)        &kp LS(NUMBER_2)   &kp LS(GRAVE)                                  &none          &none              &none          &none            &none
+  &kp LS(LEFT_BRACKET)  &kp LEFT_BRACKET   &kp LS(NUMBER_5)  &kp RIGHT_BRACKET  &kp LS(RIGHT_BRACKET)                          &kp BACKSPACE  &scl LEFT_GUI      &scl LEFT_ALT  &scl LEFT_SHIFT  &scl LEFT_CONTROL
+  &none                 &kp LS(BACKSLASH)  &kp LS(NUMBER_4)  &kp BACKSLASH      &none                                          &none          &scl LEFT_CONTROL  &none          &none            &to 14
                                                              &kp LS(NUMBER_3)   &kp LS(N1)             &kp LS(MINUS)    &none  &mo 10         &none
             >;
 
@@ -214,28 +214,28 @@
 
         LSM_RU {
             bindings = <
-  &RUEN LS(N6)            &RUEN LS(N7)         &RUEN LS(N8)        &RUEN LS(NUMBER_2)   &RUEN LS(GRAVE)                                  &none          &none          &none          &none            &none
-  &RUEN LS(LEFT_BRACKET)  &RUEN LEFT_BRACKET   &RUEN LS(NUMBER_5)  &RUEN RIGHT_BRACKET  &RUEN LS(RIGHT_BRACKET)                          &kp BACKSPACE  &scl LEFT_GUI  &scl LEFT_ALT  &scl LEFT_SHIFT  &scl LEFT_CONTROL
-  &none                   &RUEN LS(BACKSLASH)  &RUEN LS(NUMBER_4)  &RUEN BACKSLASH      &none                                            &none          &none          &none          &none            &to 14
+  &RUEN LS(N6)            &RUEN LS(N7)         &RUEN LS(N8)        &RUEN LS(NUMBER_2)   &RUEN LS(GRAVE)                                  &none          &none              &none          &none            &none
+  &RUEN LS(LEFT_BRACKET)  &RUEN LEFT_BRACKET   &RUEN LS(NUMBER_5)  &RUEN RIGHT_BRACKET  &RUEN LS(RIGHT_BRACKET)                          &kp BACKSPACE  &scl LEFT_GUI      &scl LEFT_ALT  &scl LEFT_SHIFT  &scl LEFT_CONTROL
+  &none                   &RUEN LS(BACKSLASH)  &RUEN LS(NUMBER_4)  &RUEN BACKSLASH      &none                                            &none          &scl LEFT_CONTROL  &none          &none            &to 14
                                                                    &RUEN LS(NUMBER_3)   &kp LS(N1)               &kp LS(MINUS)    &none  &mo 10         &none
             >;
         };
 
         RSM_EN {
             bindings = <
-  &none              &none            &none          &none          &none                    &kp LS(COMMA)  &kp DQT       &kp LS(N1)  &kp GRAVE         &none
-  &scl LEFT_CONTROL  &scl LEFT_SHIFT  &scl LEFT_ALT  &scl LEFT_GUI  &none                    &kp BACKSPACE  &kp COLON     &kp EQUAL   &kp SINGLE_QUOTE  &kp SEMI
-  &none              &none            &none          &none          &none                    &kp LS(DOT)    &kp LS(FSLH)  &kp COMMA   &kp DOT           &kp FSLH
-                                                     &none          &mo 11  &none    &TO_RU  &TO_EN         &none
+  &none              &none            &none          &none              &none                    &kp LS(COMMA)  &kp DQT       &kp LS(N1)  &kp GRAVE         &none
+  &scl LEFT_CONTROL  &scl LEFT_SHIFT  &scl LEFT_ALT  &scl LEFT_GUI      &none                    &kp BACKSPACE  &kp COLON     &kp EQUAL   &kp SINGLE_QUOTE  &kp SEMI
+  &none              &none            &none          &scl LEFT_CONTROL  &none                    &kp LS(DOT)    &kp LS(FSLH)  &kp COMMA   &kp DOT           &kp FSLH
+                                                     &none              &mo 11  &none    &TO_RU  &TO_EN         &none
             >;
         };
 
         RSM_RU {
             bindings = <
-  &none              &none            &none          &none          &none                    &RUEN LS(COMMA)  &RUEN DQT     &kp LS(N1)   &RUEN GRAVE         &none
-  &scl LEFT_CONTROL  &scl LEFT_SHIFT  &scl LEFT_ALT  &scl LEFT_GUI  &none                    &kp BACKSPACE    &RUEN COLON   &kp EQUAL    &RUEN SINGLE_QUOTE  &RUEN SEMI
-  &none              &none            &none          &none          &none                    &RUEN LS(DOT)    &kp LS(FSLH)  &RUEN COMMA  &RUEN DOT           &kp FSLH
-                                                     &none          &mo 11  &none    &TO_RU  &TO_EN           &none
+  &none              &none            &none          &none              &none                    &RUEN LS(COMMA)  &RUEN DQT     &kp LS(N1)   &RUEN GRAVE         &none
+  &scl LEFT_CONTROL  &scl LEFT_SHIFT  &scl LEFT_ALT  &scl LEFT_GUI      &none                    &kp BACKSPACE    &RUEN COLON   &kp EQUAL    &RUEN SINGLE_QUOTE  &RUEN SEMI
+  &none              &none            &none          &scl LEFT_CONTROL  &none                    &RUEN LS(DOT)    &kp LS(FSLH)  &RUEN COMMA  &RUEN DOT           &kp FSLH
+                                                     &none              &mo 11  &none    &TO_RU  &TO_EN           &none
             >;
         };
 
@@ -318,10 +318,10 @@
         SHOTCUTS {
             display-name = "Shortcuts";
             bindings = <
-  &kp Q                &kp W              &kp E            &kp R            &kp T                        &kp Y      &kp U            &kp I            &kp O              &kp P
-  &hml LEFT_CONTROL A  &hml LEFT_SHIFT S  &hml LEFT_ALT D  &hml LEFT_GUI F  &kp G                        &kp H      &hmr LEFT_GUI J  &hmr LEFT_ALT K  &hmr LEFT_SHIFT L  &hmr LEFT_CONTROL SEMI
-  &kp Z                &kp X              &kp C            &kp V            &kp B                        &kp N      &kp M            &kp COMMA        &kp DOT            &kp FSLH
-                                                           &none            &kp SPACE  &none    &kp TAB  &kp ENTER  &none
+  &kp Q                &kp W              &kp E            &kp R                &kp T                        &kp Y      &kp U                &kp I            &kp O              &kp P
+  &hml LEFT_CONTROL A  &hml LEFT_SHIFT S  &hml LEFT_ALT D  &hml LEFT_GUI F      &kp G                        &kp H      &hmr LEFT_GUI J      &hmr LEFT_ALT K  &hmr LEFT_SHIFT L  &hmr LEFT_CONTROL SEMI
+  &kp Z                &kp X              &kp C            &hml LEFT_CONTROL V  &kp B                        &kp N      &hmr LEFT_CONTROL M  &kp COMMA        &kp DOT            &kp FSLH
+                                                           &none                &kp SPACE  &none    &kp TAB  &kp ENTER  &none
             >;
         };
     };
