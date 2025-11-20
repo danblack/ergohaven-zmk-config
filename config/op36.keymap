@@ -205,7 +205,7 @@
             bindings = <
   &kp LS(N6)            &kp LS(N7)         &kp LS(N8)        &kp LS(NUMBER_2)   &kp LS(GRAVE)                                  &none          &none              &none          &none            &none
   &kp LS(LEFT_BRACKET)  &kp LEFT_BRACKET   &kp LS(NUMBER_5)  &kp RIGHT_BRACKET  &kp LS(RIGHT_BRACKET)                          &kp BACKSPACE  &scl LEFT_GUI      &scl LEFT_ALT  &scl LEFT_SHIFT  &scl LEFT_CONTROL
-  &none                 &kp LS(BACKSLASH)  &kp LS(NUMBER_4)  &kp BACKSLASH      &none                                          &none          &scl LEFT_CONTROL  &none          &none            &to 14
+  &none                 &kp LS(BACKSLASH)  &kp LS(NUMBER_4)  &kp BACKSLASH      &none                                          &none          &scl LEFT_CONTROL  &none          &none            &to 15
                                                              &kp LS(NUMBER_3)   &kp LS(N1)             &kp LS(MINUS)    &none  &mo 10         &none
             >;
 
@@ -216,7 +216,7 @@
             bindings = <
   &RUEN LS(N6)            &RUEN LS(N7)         &RUEN LS(N8)        &RUEN LS(NUMBER_2)   &RUEN LS(GRAVE)                                  &none          &none              &none          &none            &none
   &RUEN LS(LEFT_BRACKET)  &RUEN LEFT_BRACKET   &RUEN LS(NUMBER_5)  &RUEN RIGHT_BRACKET  &RUEN LS(RIGHT_BRACKET)                          &kp BACKSPACE  &scl LEFT_GUI      &scl LEFT_ALT  &scl LEFT_SHIFT  &scl LEFT_CONTROL
-  &none                   &RUEN LS(BACKSLASH)  &RUEN LS(NUMBER_4)  &RUEN BACKSLASH      &none                                            &none          &scl LEFT_CONTROL  &none          &none            &to 14
+  &none                   &RUEN LS(BACKSLASH)  &RUEN LS(NUMBER_4)  &RUEN BACKSLASH      &none                                            &none          &scl LEFT_CONTROL  &none          &none            &to 15
                                                                    &RUEN LS(NUMBER_3)   &kp LS(N1)               &kp LS(MINUS)    &none  &mo 10         &none
             >;
         };
@@ -306,10 +306,10 @@
 
         SETUP {
             bindings = <
-  &none        &none  &none  &none  &none                   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_CLR
-  &none        &none  &none  &none  &none                   &out OUT_BLE  &kp C_VOL_DN  &kp C_MUTE    &kp C_VOL_UP  &kp RGUI
-  &bootloader  &none  &none  &none  &none                   &out OUT_USB  &kp C_PREV    &kp C_PP      &kp C_NEXT    &studio_unlock
-                             &none  &none  &TO_EN    &none  &none         &none
+  &TO_EN       &none  &none  &none  &none                  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_CLR
+  &none        &none  &none  &none  &none                  &out OUT_BLE  &kp C_VOL_DN  &kp C_MUTE    &kp C_VOL_UP  &kp RGUI
+  &bootloader  &none  &none  &none  &none                  &out OUT_USB  &kp C_PREV    &kp C_PP      &kp C_NEXT    &studio_unlock
+                             &none  &none  &none    &none  &none         &none
             >;
 
             display-name = "Setup";
@@ -322,6 +322,15 @@
   &hml LEFT_CONTROL A  &hml LEFT_SHIFT S  &hml LEFT_ALT D  &hml LEFT_GUI F      &kp G                        &kp H      &hmr LEFT_GUI J      &hmr LEFT_ALT K  &hmr LEFT_SHIFT L  &hmr LEFT_CONTROL SEMI
   &kp Z                &kp X              &kp C            &hml LEFT_CONTROL V  &kp B                        &kp N      &hmr LEFT_CONTROL M  &kp COMMA        &kp DOT            &kp FSLH
                                                            &none                &kp SPACE  &none    &kp TAB  &kp ENTER  &none
+            >;
+        };
+
+        layer_17 {
+            bindings = <
+  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
+  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
+  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
+                          &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
     };
