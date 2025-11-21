@@ -237,7 +237,7 @@
 
         RSM_EN {
             bindings = <
-  &none              &none            &none          &none              &none                    &kp LS(COMMA)  &kp DQT       &kp LS(N1)  &kp GRAVE         &none
+  &none              &none            &none          &none              &mo 11                   &kp LS(COMMA)  &kp DQT       &kp LS(N1)  &kp GRAVE         &none
   &scl LEFT_CONTROL  &scl LEFT_SHIFT  &scl LEFT_ALT  &scl LEFT_GUI      &mo 11                   &kp BACKSPACE  &kp COLON     &kp EQUAL   &kp SINGLE_QUOTE  &kp SEMI
   &none              &none            &none          &scl LEFT_CONTROL  &none                    &kp LS(DOT)    &kp LS(FSLH)  &kp COMMA   &kp DOT           &kp FSLH
                                                      &none              &mo 11  &none    &TO_RU  &TO_EN         &none
@@ -246,7 +246,7 @@
 
         RSM_RU {
             bindings = <
-  &none              &none            &none          &none              &none                    &RUEN LS(COMMA)  &RUEN DQT     &kp LS(N1)   &RUEN GRAVE         &none
+  &none              &none            &none          &none              &mo 11                   &RUEN LS(COMMA)  &RUEN DQT     &kp LS(N1)   &RUEN GRAVE         &none
   &scl LEFT_CONTROL  &scl LEFT_SHIFT  &scl LEFT_ALT  &scl LEFT_GUI      &mo 11                   &kp BACKSPACE    &RUEN COLON   &kp EQUAL    &RUEN SINGLE_QUOTE  &RUEN SEMI
   &none              &none            &none          &scl LEFT_CONTROL  &none                    &RUEN LS(DOT)    &kp LS(FSLH)  &RUEN COMMA  &RUEN DOT           &kp FSLH
                                                      &none              &mo 11  &none    &TO_RU  &TO_EN           &none
