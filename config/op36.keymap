@@ -205,7 +205,7 @@
             bindings = <
   &kp LS(N6)            &kp LS(N7)         &kp LS(N8)        &kp LS(NUMBER_2)   &kp LS(GRAVE)                                  &none          &none              &none          &none            &none
   &kp LS(LEFT_BRACKET)  &kp LEFT_BRACKET   &kp LS(NUMBER_5)  &kp RIGHT_BRACKET  &kp LS(RIGHT_BRACKET)                          &kp BACKSPACE  &scl LEFT_GUI      &scl LEFT_ALT  &scl LEFT_SHIFT  &scl LEFT_CONTROL
-  &none                 &kp LS(BACKSLASH)  &kp LS(NUMBER_4)  &kp BACKSLASH      &none                                          &none          &scl LEFT_CONTROL  &none          &none            &to 15
+  &none                 &kp LS(BACKSLASH)  &kp LS(NUMBER_4)  &kp BACKSLASH      &none                                          &none          &scl LEFT_CONTROL  &kp ESC        &none            &to 15
                                                              &kp LS(NUMBER_3)   &kp LS(N1)             &kp LS(MINUS)    &none  &mo 10         &none
             >;
 
@@ -216,7 +216,7 @@
             bindings = <
   &RUEN LS(N6)            &RUEN LS(N7)         &RUEN LS(N8)        &RUEN LS(NUMBER_2)   &RUEN LS(GRAVE)                                  &none          &none              &none          &none            &none
   &RUEN LS(LEFT_BRACKET)  &RUEN LEFT_BRACKET   &RUEN LS(NUMBER_5)  &RUEN RIGHT_BRACKET  &RUEN LS(RIGHT_BRACKET)                          &kp BACKSPACE  &scl LEFT_GUI      &scl LEFT_ALT  &scl LEFT_SHIFT  &scl LEFT_CONTROL
-  &none                   &RUEN LS(BACKSLASH)  &RUEN LS(NUMBER_4)  &RUEN BACKSLASH      &none                                            &none          &scl LEFT_CONTROL  &none          &none            &to 15
+  &none                   &RUEN LS(BACKSLASH)  &RUEN LS(NUMBER_4)  &RUEN BACKSLASH      &none                                            &none          &scl LEFT_CONTROL  &kp ESC        &none            &to 15
                                                                    &RUEN LS(NUMBER_3)   &kp LS(N1)               &kp LS(MINUS)    &none  &mo 10         &none
             >;
         };
@@ -243,7 +243,7 @@
             bindings = <
   &none       &kp N7  &kp N8  &kp N9    &kp N0                           &none          &kp LS(COMMA)     &none         &kp LS(DOT)     &none
   &kp LS(N9)  &kp N4  &kp N5  &kp N6    &kp LS(N0)                       &kp BACKSPACE  &kp LEFT_GUI      &kp LEFT_ALT  &kp LEFT_SHIFT  &kp LEFT_CONTROL
-  &none       &kp N1  &kp N2  &kp N3    &kp DOT                          &none          &kp LEFT_CONTROL  &kp COMMA     &kp DOT         &none
+  &none       &kp N1  &kp N2  &kp N3    &kp DOT                          &none          &kp LEFT_CONTROL  &kp ESC       &kp DOT         &none
                               &kp PLUS  &kp MINUS   &kp EQUAL    &mo 10  &none          &none
             >;
         };
@@ -252,7 +252,7 @@
             bindings = <
   &none       &kp N7  &kp N8  &kp N9    &kp N0                           &none          &RUEN LS(COMMA)   &none         &RUEN LS(DOT)   &none
   &kp LS(N9)  &kp N4  &kp N5  &kp N6    &kp LS(N0)                       &kp BACKSPACE  &kp LEFT_GUI      &kp LEFT_ALT  &kp LEFT_SHIFT  &kp LEFT_CONTROL
-  &none       &kp N1  &kp N2  &kp N3    &RUEN DOT                        &none          &kp LEFT_CONTROL  &RUEN COMMA   &RUEN DOT       &none
+  &none       &kp N1  &kp N2  &kp N3    &RUEN DOT                        &none          &kp LEFT_CONTROL  &kp ESC       &RUEN DOT       &none
                               &kp PLUS  &kp MINUS   &kp EQUAL    &mo 10  &none          &none
             >;
         };
