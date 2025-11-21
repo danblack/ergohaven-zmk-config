@@ -155,6 +155,20 @@
 
             label = "SHORTCUT_MOD";
         };
+
+        lscl: lscl {
+            compatible = "zmk,behavior-macro-two-param";
+            #binding-cells = <2>;
+            bindings =
+                <&macro_press>,
+                <&macro_param_1to1 &mo MACRO_PLACEHOLDER &macro_param_2to1 &kp MACRO_PLACEHOLDER>,
+                <&macro_pause_for_release>,
+                <&macro_release>,
+                <&macro_param_1to1 &mo MACRO_PLACEHOLDER &macro_param_2to1 &kp MACRO_PLACEHOLDER>,
+                <&macro_press>;
+
+            label = "LSCL";
+        };
     };
 
     keymap {
@@ -203,9 +217,9 @@
 
         LSM_EN {
             bindings = <
-  &kp LS(N6)            &kp LS(N7)         &kp LS(N8)        &kp LS(NUMBER_2)   &kp LS(GRAVE)                                  &mo 10         &none              &none          &none            &none
-  &kp LS(LEFT_BRACKET)  &kp LEFT_BRACKET   &kp LS(NUMBER_5)  &kp RIGHT_BRACKET  &kp LS(RIGHT_BRACKET)                          &kp BACKSPACE  &scl LEFT_GUI      &scl LEFT_ALT  &scl LEFT_SHIFT  &scl LEFT_CONTROL
-  &kp LS(NUMBER_3)      &kp LS(BACKSLASH)  &kp LS(NUMBER_4)  &kp BACKSLASH      &none                                          &none          &scl LEFT_CONTROL  &kp ESC        &none            &to 15
+  &kp LS(N6)            &kp LS(N7)         &kp LS(N8)        &kp LS(NUMBER_2)   &kp LS(GRAVE)                                  &mo 10         &lscl 10 LEFT_COMMAND  &lscl 10 LEFT_ALT  &lscl 10 LEFT_SHIFT  &lscl 10 LEFT_CONTROL
+  &kp LS(LEFT_BRACKET)  &kp LEFT_BRACKET   &kp LS(NUMBER_5)  &kp RIGHT_BRACKET  &kp LS(RIGHT_BRACKET)                          &kp BACKSPACE  &scl LEFT_GUI          &scl LEFT_ALT      &scl LEFT_SHIFT      &scl LEFT_CONTROL
+  &kp LS(NUMBER_3)      &kp LS(BACKSLASH)  &kp LS(NUMBER_4)  &kp BACKSLASH      &none                                          &none          &scl LEFT_CONTROL      &kp ESC            &none                &to 15
                                                              &kp LS(NUMBER_3)   &kp LS(N1)             &kp LS(MINUS)    &none  &mo 10         &none
             >;
 
@@ -214,9 +228,9 @@
 
         LSM_RU {
             bindings = <
-  &RUEN LS(N6)            &RUEN LS(N7)         &RUEN LS(N8)        &RUEN LS(NUMBER_2)   &RUEN LS(GRAVE)                                  &mo 10         &none              &none          &none            &none
-  &RUEN LS(LEFT_BRACKET)  &RUEN LEFT_BRACKET   &RUEN LS(NUMBER_5)  &RUEN RIGHT_BRACKET  &RUEN LS(RIGHT_BRACKET)                          &kp BACKSPACE  &scl LEFT_GUI      &scl LEFT_ALT  &scl LEFT_SHIFT  &scl LEFT_CONTROL
-  &RUEN LS(N3)            &RUEN LS(BACKSLASH)  &RUEN LS(NUMBER_4)  &RUEN BACKSLASH      &none                                            &none          &scl LEFT_CONTROL  &kp ESC        &none            &to 15
+  &RUEN LS(N6)            &RUEN LS(N7)         &RUEN LS(N8)        &RUEN LS(NUMBER_2)   &RUEN LS(GRAVE)                                  &mo 10         &lscl 10 LEFT_COMMAND  &lscl 10 LEFT_ALT  &lscl 10 LEFT_SHIFT  &lscl 10 LEFT_CONTROL
+  &RUEN LS(LEFT_BRACKET)  &RUEN LEFT_BRACKET   &RUEN LS(NUMBER_5)  &RUEN RIGHT_BRACKET  &RUEN LS(RIGHT_BRACKET)                          &kp BACKSPACE  &scl LEFT_GUI          &scl LEFT_ALT      &scl LEFT_SHIFT      &scl LEFT_CONTROL
+  &RUEN LS(N3)            &RUEN LS(BACKSLASH)  &RUEN LS(NUMBER_4)  &RUEN BACKSLASH      &none                                            &none          &scl LEFT_CONTROL      &kp ESC            &none                &to 15
                                                                    &RUEN LS(NUMBER_3)   &kp LS(N1)               &kp LS(MINUS)    &none  &mo 10         &none
             >;
         };
@@ -259,7 +273,7 @@
 
         FUN {
             bindings = <
-  &kp F12  &kp F7  &kp F8  &kp F9  &none                  &none  &none             &none         &none           &none
+  &kp F12  &kp F7  &kp F8  &kp F9  &none                  &none  &kp LEFT_META     &kp LEFT_ALT  &kp LEFT_SHIFT  &kp LEFT_CONTROL
   &kp F11  &kp F4  &kp F5  &kp F6  &none                  &none  &kp LEFT_GUI      &kp LEFT_ALT  &kp LEFT_SHIFT  &kp LEFT_CONTROL
   &kp F10  &kp F1  &kp F2  &kp F3  &none                  &none  &kp LEFT_CONTROL  &none         &none           &none
                            &none   &none  &none    &none  &none  &none
