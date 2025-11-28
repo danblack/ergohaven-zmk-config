@@ -118,7 +118,8 @@
             y-input-code = <1>;
             trigger-period-ms = <64>;
             time-to-max-speed-ms = <0>;
-            acceleration-exponent = <0>;
+            acceleration-exponent = <1>;
+            delay-ms = <0>;
         };
     };
 
