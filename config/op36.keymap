@@ -116,10 +116,8 @@
             #binding-cells = <1>;
             x-input-code = <INPUT_REL_X>;
             y-input-code = <INPUT_REL_Y>;
-            trigger-period-ms = <64>;
-            time-to-max-speed-ms = <0>;
+            time-to-max-speed-ms = <300>;
             acceleration-exponent = <1>;
-            delay-ms = <0>;
         };
     };
 
