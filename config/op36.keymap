@@ -220,7 +220,7 @@
             bindings = <
   &kp LG(LS(Z))     &kp LG(X)       &kp LG(C)     &kp LG(V)         &kp LC(LS(V))                     &none          &kp HOME        &kp UP      &kp END     &kp PAGE_UP
   &kp LEFT_CONTROL  &kp LEFT_SHIFT  &kp LEFT_ALT  &kp LEFT_GUI      &kp LG(Z)                         &kp BACKSPACE  &kp LEFT_ARROW  &kp DOWN    &kp RIGHT   &kp PAGE_DOWN
-  &to 13            &none           &kp LG(A)     &kp LEFT_CONTROL  &none                             &kp CAPSLOCK   &TO_EN_UP       &kp ESCAPE  &kp DELETE  &none
+  &to 13            &none           &kp LG(A)     &kp LEFT_CONTROL  &kp ESC                           &kp CAPSLOCK   &TO_EN_UP       &kp ESCAPE  &kp DELETE  &none
                                                   &none             &none          &mo 11    &kp TAB  &kp ENTER      &none
             >;
 
