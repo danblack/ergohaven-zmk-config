@@ -119,6 +119,20 @@
             time-to-max-speed-ms = <300>;
             acceleration-exponent = <1>;
         };
+
+        mrsk: mrsk {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            require-prior-idle-ms = <150>;
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;
+            bindings = <&MORE>, <&sk>;
+
+            hold-trigger-key-positions = <5 6 7 8 9 15 16 17 18 19 25 26 27 28 29 33 34 35>;
+            hold-trigger-on-release;
+            label = "MRSK";
+        };
     };
 
     combos { compatible = "zmk,combos"; };
@@ -190,6 +204,7 @@
                 <&macro_param_2to1 &kp MACRO_PLACEHOLDER &macro_param_1to1 &mo MACRO_PLACEHOLDER>,
                 <&macro_tap>,
                 <&kp LS(LA(LC(LG(R))))>;
+
             label = "MORE";
         };
     };
@@ -223,7 +238,7 @@
   &kp Q  &kp W  &kp E  &kp R  &ru_e                                              &kp Y               &kp U   &ru_sh     &kp P    &kp LEFT_BRACKET
   &kp A  &kp S  &kp D  &kp F  &kp G                                              &kp H               &kp J   &kp K      &kp L    &kp SEMI
   &kp Z  &kp X  &kp C  &kp V  &kp B                                              &kp N               &ru_mz  &kp COMMA  &kp DOT  &kp SQT
-                       &none  &lt 3 SPACE  &mosk 7 LEFT_GUI    &mosk 5 LEFT_ALT  &mosk 9 LEFT_SHIFT  &none
+                       &none  &lt 3 SPACE  &mrsk 6 LEFT_GUI    &mosk 5 LEFT_ALT  &mosk 9 LEFT_SHIFT  &none
             >;
         };
 
