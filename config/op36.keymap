@@ -187,30 +187,30 @@
         ENG {
             display-name = "English";
             bindings = <
-  &kp Q  &kp W  &kp E  &kp R        &kp T                                              &kp Y               &kp U                  &kp I      &kp O    &kp P
-  &kp A  &kp S  &kp D  &kp F        &kp G                                              &kp H               &kp J                  &kp K      &kp L    &kp SEMI
-  &kp Z  &kp X  &kp C  &kp V        &kp B                                              &kp N               &kp M                  &kp COMMA  &kp DOT  &kp FSLH
-                       &mosl 11 12  &lt 3 SPACE  &mosk 6 LEFT_GUI    &mosk 4 LEFT_ALT  &mosk 8 LEFT_SHIFT  &mosk 10 LEFT_CONTROL
+  &kp Q  &kp W  &kp E  &kp R  &kp T                                              &kp Y               &kp U  &kp I      &kp O    &kp P
+  &kp A  &kp S  &kp D  &kp F  &kp G                                              &kp H               &kp J  &kp K      &kp L    &kp SEMI
+  &kp Z  &kp X  &kp C  &kp V  &kp B                                              &kp N               &kp M  &kp COMMA  &kp DOT  &kp FSLH
+                       &none  &lt 3 SPACE  &mosk 6 LEFT_GUI    &mosk 4 LEFT_ALT  &mosk 8 LEFT_SHIFT  &none
             >;
         };
 
         ENG_UP {
             display-name = "English Uppercase";
             bindings = <
-  &kp LS(Q)  &kp LS(W)  &kp LS(E)  &kp LS(R)    &kp LS(T)                                          &kp LS(Y)           &kp LS(U)              &kp LS(I)  &kp LS(O)  &kp LS(P)
-  &kp LS(A)  &kp LS(S)  &kp LS(D)  &kp LS(F)    &kp LS(G)                                          &kp LS(H)           &kp LS(J)              &kp LS(K)  &kp LS(L)  &TO_RU
-  &kp LS(Z)  &kp LS(X)  &kp LS(C)  &kp LS(V)    &kp LS(B)                                          &kp LS(N)           &kp LS(M)              &TO_RU     &TO_RU     &TO_RU
-                                   &mosl 11 12  &lt 3 SPACE  &mosk 6 LEFT_GUI    &mosk 4 LEFT_ALT  &mosk 8 LEFT_SHIFT  &mosk 10 LEFT_CONTROL
+  &kp LS(Q)  &kp LS(W)  &kp LS(E)  &kp LS(R)  &kp LS(T)                                          &kp LS(Y)           &kp LS(U)  &kp LS(I)  &kp LS(O)  &kp LS(P)
+  &kp LS(A)  &kp LS(S)  &kp LS(D)  &kp LS(F)  &kp LS(G)                                          &kp LS(H)           &kp LS(J)  &kp LS(K)  &kp LS(L)  &TO_RU
+  &kp LS(Z)  &kp LS(X)  &kp LS(C)  &kp LS(V)  &kp LS(B)                                          &kp LS(N)           &kp LS(M)  &TO_RU     &TO_RU     &TO_RU
+                                   &none      &lt 3 SPACE  &mosk 6 LEFT_GUI    &mosk 4 LEFT_ALT  &mosk 8 LEFT_SHIFT  &none
             >;
         };
 
         RUS {
             display-name = "Russian";
             bindings = <
-  &kp Q  &kp W  &kp E  &kp R        &ru_e                                              &kp Y               &kp U                  &ru_sh     &kp P    &kp LEFT_BRACKET
-  &kp A  &kp S  &kp D  &kp F        &kp G                                              &kp H               &kp J                  &kp K      &kp L    &kp SEMI
-  &kp Z  &kp X  &kp C  &kp V        &kp B                                              &kp N               &ru_mz                 &kp COMMA  &kp DOT  &kp SQT
-                       &mosl 11 12  &lt 3 SPACE  &mosk 7 LEFT_GUI    &mosk 5 LEFT_ALT  &mosk 9 LEFT_SHIFT  &mosk 10 LEFT_CONTROL
+  &kp Q  &kp W  &kp E  &kp R  &ru_e                                              &kp Y               &kp U   &ru_sh     &kp P    &kp LEFT_BRACKET
+  &kp A  &kp S  &kp D  &kp F  &kp G                                              &kp H               &kp J   &kp K      &kp L    &kp SEMI
+  &kp Z  &kp X  &kp C  &kp V  &kp B                                              &kp N               &ru_mz  &kp COMMA  &kp DOT  &kp SQT
+                       &none  &lt 3 SPACE  &mosk 7 LEFT_GUI    &mosk 5 LEFT_ALT  &mosk 9 LEFT_SHIFT  &none
             >;
         };
 
@@ -230,7 +230,7 @@
   &kp LS(N6)            &kp LS(N7)         &kp LS(N8)        &kp LS(NUMBER_2)   &kp LS(GRAVE)                                  &mo 10         &lscl 10 LEFT_COMMAND  &lscl 10 LEFT_ALT  &lscl 10 LEFT_SHIFT  &lscl 10 LEFT_CONTROL
   &kp LS(LEFT_BRACKET)  &kp LEFT_BRACKET   &kp LS(NUMBER_5)  &kp RIGHT_BRACKET  &kp LS(RIGHT_BRACKET)                          &kp BACKSPACE  &scl LEFT_GUI          &scl LEFT_ALT      &scl LEFT_SHIFT      &scl LEFT_CONTROL
   &kp LS(NUMBER_3)      &kp LS(BACKSLASH)  &kp LS(NUMBER_4)  &kp BACKSLASH      &none                                          &none          &scl LEFT_CONTROL      &kp ESC            &none                &to 15
-                                                             &kp LS(NUMBER_3)   &kp LS(N1)             &kp LS(MINUS)    &none  &mo 10         &none
+                                                             &none              &kp LS(N1)             &kp LS(MINUS)    &none  &mo 10         &none
             >;
 
             label = "LSM_EN";
@@ -241,7 +241,7 @@
   &RUEN LS(N6)            &RUEN LS(N7)         &RUEN LS(N8)        &RUEN LS(NUMBER_2)   &RUEN LS(GRAVE)                                  &mo 10         &lscl 10 LEFT_COMMAND  &lscl 10 LEFT_ALT  &lscl 10 LEFT_SHIFT  &lscl 10 LEFT_CONTROL
   &RUEN LS(LEFT_BRACKET)  &RUEN LEFT_BRACKET   &RUEN LS(NUMBER_5)  &RUEN RIGHT_BRACKET  &RUEN LS(RIGHT_BRACKET)                          &kp BACKSPACE  &scl LEFT_GUI          &scl LEFT_ALT      &scl LEFT_SHIFT      &scl LEFT_CONTROL
   &RUEN LS(N3)            &RUEN LS(BACKSLASH)  &RUEN LS(NUMBER_4)  &RUEN BACKSLASH      &none                                            &none          &scl LEFT_CONTROL      &kp ESC            &none                &to 15
-                                                                   &RUEN LS(NUMBER_3)   &kp LS(N1)               &kp LS(MINUS)    &none  &mo 10         &none
+                                                                   &none                &kp LS(N1)               &kp LS(MINUS)    &none  &mo 10         &none
             >;
         };
 
@@ -265,19 +265,19 @@
 
         NUM_EN {
             bindings = <
-  &none       &kp N7  &kp N8  &kp N9    &kp N0                           &none          &kp LS(COMMA)     &none         &kp LS(DOT)     &none
-  &kp LS(N9)  &kp N4  &kp N5  &kp N6    &kp LS(N0)                       &kp BACKSPACE  &kp LEFT_GUI      &kp LEFT_ALT  &kp LEFT_SHIFT  &kp LEFT_CONTROL
-  &kp PLUS    &kp N1  &kp N2  &kp N3    &kp DOT                          &none          &kp LEFT_CONTROL  &kp ESC       &kp DOT         &none
-                              &kp PLUS  &kp MINUS   &kp EQUAL    &mo 10  &none          &none
+  &none       &kp N7  &kp N8  &kp N9  &kp N0                           &none          &kp LS(COMMA)     &none         &kp LS(DOT)     &none
+  &kp LS(N9)  &kp N4  &kp N5  &kp N6  &kp LS(N0)                       &kp BACKSPACE  &kp LEFT_GUI      &kp LEFT_ALT  &kp LEFT_SHIFT  &kp LEFT_CONTROL
+  &kp PLUS    &kp N1  &kp N2  &kp N3  &kp DOT                          &none          &kp LEFT_CONTROL  &kp ESC       &kp DOT         &none
+                              &none   &kp MINUS   &kp EQUAL    &mo 10  &none          &none
             >;
         };
 
         NUM_RU {
             bindings = <
-  &none       &kp N7  &kp N8  &kp N9    &kp N0                           &none          &RUEN LS(COMMA)   &none         &RUEN LS(DOT)   &none
-  &kp LS(N9)  &kp N4  &kp N5  &kp N6    &kp LS(N0)                       &kp BACKSPACE  &kp LEFT_GUI      &kp LEFT_ALT  &kp LEFT_SHIFT  &kp LEFT_CONTROL
-  &kp PLUS    &kp N1  &kp N2  &kp N3    &RUEN DOT                        &none          &kp LEFT_CONTROL  &kp ESC       &RUEN DOT       &none
-                              &kp PLUS  &kp MINUS   &kp EQUAL    &mo 10  &none          &none
+  &none       &kp N7  &kp N8  &kp N9  &kp N0                           &none          &RUEN LS(COMMA)   &none         &RUEN LS(DOT)   &none
+  &kp LS(N9)  &kp N4  &kp N5  &kp N6  &kp LS(N0)                       &kp BACKSPACE  &kp LEFT_GUI      &kp LEFT_ALT  &kp LEFT_SHIFT  &kp LEFT_CONTROL
+  &kp PLUS    &kp N1  &kp N2  &kp N3  &RUEN DOT                        &none          &kp LEFT_CONTROL  &kp ESC       &RUEN DOT       &none
+                              &none   &kp MINUS   &kp EQUAL    &mo 10  &none          &none
             >;
         };
 
@@ -355,6 +355,15 @@
   &kp LEFT_CONTROL  &kp LEFT_SHIFT  &kp LEFT_ALT  &kp LEFT_GUI      &none                          &kp BACKSPACE  &smmv MOVE_LEFT  &smmv MOVE_DOWN  &smmv MOVE_RIGHT  &msc SCRL_DOWN
   &TO_EN            &none           &none         &kp LEFT_CONTROL  &none                          &none          &none            &kp ESC          &none             &none
                                                   &none             &mkp LCLK  &mkp RCLK    &none  &kp ENTER      &none
+            >;
+        };
+
+        layer_18 {
+            bindings = <
+  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
+  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
+  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
+                          &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
     };
