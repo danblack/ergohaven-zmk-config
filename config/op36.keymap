@@ -179,6 +179,21 @@
 
             label = "LSCL";
         };
+
+        MORE: MORE {
+            compatible = "zmk,behavior-macro-two-param";
+            #binding-cells = <2>;
+            bindings =
+                <&kp LA(LC(LS(LG(E))))>,
+                <&macro_press>,
+                <&macro_param_1to1 &mo MACRO_PLACEHOLDER &macro_param_2to1 &kp MACRO_PLACEHOLDER>,
+                <&macro_pause_for_release>,
+                <&macro_release>,
+                <&macro_param_1to1 &mo MACRO_PLACEHOLDER &macro_param_2to1 &kp MACRO_PLACEHOLDER>,
+                <&macro_tap>,
+                <&kp LS(LA(LC(LG(R))))>;
+            label = "MORE";
+        };
     };
 
     keymap {
