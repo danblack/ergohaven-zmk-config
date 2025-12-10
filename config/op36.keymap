@@ -11,7 +11,10 @@
     require-prior-idle-ms = <125>;
 };
 
-&sk { release-after-ms = <2000>; };
+&sk {
+    release-after-ms = <2000>;
+    quick-release;
+};
 
 &sl { release-after-ms = <2000>; };
 
