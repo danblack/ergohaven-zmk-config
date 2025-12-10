@@ -222,7 +222,7 @@
                                                   &none             &none          &mo 11    &kp TAB  &kp ENTER      &none
             >;
 
-            display-name = "Navigation";
+            display-name = "Nav";
         };
 
         LSM_EN {

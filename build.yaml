@@ -103,6 +103,5 @@ include:
 #     artifact-name: k03_qube_ruen-ergohaven-zmk
 #   - board: ergohaven
 #     shield: k03_left_qube
-
 #   - board: ergohaven
 #     shield: settings_reset
