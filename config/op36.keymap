@@ -229,10 +229,10 @@
         RUS {
             display-name = "Russian";
             bindings = <
-  &kp Q  &kp W  &kp E  &kp R  &ru_e                                              &kp Y               &kp U   &ru_sh     &kp P    &kp LEFT_BRACKET
-  &kp A  &kp S  &kp D  &kp F  &kp G                                              &kp H               &kp J   &kp K      &kp L    &kp SEMI
-  &kp Z  &kp X  &kp C  &kp V  &kp B                                              &kp N               &ru_mz  &kp COMMA  &kp DOT  &kp SQT
-                       &none  &lt 3 SPACE  &mrsk 6 LEFT_GUI    &mosk 5 LEFT_ALT  &mosk 9 LEFT_SHIFT  &none
+  &kp Q  &kp W  &kp E  &kp R             &ru_e                                              &kp Y               &kp U   &ru_sh     &kp P    &kp LEFT_BRACKET
+  &kp A  &kp S  &kp D  &kp F             &kp G                                              &kp H               &kp J   &kp K      &kp L    &kp SEMI
+  &kp Z  &kp X  &kp C  &kp V             &kp B                                              &kp N               &ru_mz  &kp COMMA  &kp DOT  &kp SQT
+                       &mrsk 6 LEFT_GUI  &lt 3 SPACE  &mosk 7 LEFT_GUI    &mosk 5 LEFT_ALT  &mosk 9 LEFT_SHIFT  &none
             >;
         };
 
@@ -251,8 +251,8 @@
             bindings = <
   &kp LS(N6)            &kp LS(N7)         &kp LS(N8)        &kp LS(NUMBER_2)   &kp LS(GRAVE)                                  &mo 10         &lscl 10 LEFT_COMMAND  &lscl 10 LEFT_ALT  &lscl 10 LEFT_SHIFT  &lscl 10 LEFT_CONTROL
   &kp LS(LEFT_BRACKET)  &kp LEFT_BRACKET   &kp LS(NUMBER_5)  &kp RIGHT_BRACKET  &kp LS(RIGHT_BRACKET)                          &kp BACKSPACE  &scl LEFT_GUI          &scl LEFT_ALT      &scl LEFT_SHIFT      &scl LEFT_CONTROL
-  &kp LS(NUMBER_3)      &kp LS(BACKSLASH)  &kp LS(NUMBER_4)  &kp BACKSLASH      &none                                          &none          &scl LEFT_CONTROL      &kp ESC            &none                &to 15
-                                                             &none              &kp LS(N1)             &kp LS(MINUS)    &none  &mo 10         &none
+  &kp LESS_THAN         &kp LS(BACKSLASH)  &kp LS(NUMBER_4)  &kp BACKSLASH      &kp GREATER_THAN                               &none          &scl LEFT_CONTROL      &kp ESC            &none                &to 15
+                                                             &none              &kp LS(NUMBER_3)       &kp LS(MINUS)    &none  &mo 10         &none
             >;
 
             label = "LSM_EN";
@@ -262,8 +262,8 @@
             bindings = <
   &RUEN LS(N6)            &RUEN LS(N7)         &RUEN LS(N8)        &RUEN LS(NUMBER_2)   &RUEN LS(GRAVE)                                  &mo 10         &lscl 10 LEFT_COMMAND  &lscl 10 LEFT_ALT  &lscl 10 LEFT_SHIFT  &lscl 10 LEFT_CONTROL
   &RUEN LS(LEFT_BRACKET)  &RUEN LEFT_BRACKET   &RUEN LS(NUMBER_5)  &RUEN RIGHT_BRACKET  &RUEN LS(RIGHT_BRACKET)                          &kp BACKSPACE  &scl LEFT_GUI          &scl LEFT_ALT      &scl LEFT_SHIFT      &scl LEFT_CONTROL
-  &RUEN LS(N3)            &RUEN LS(BACKSLASH)  &RUEN LS(NUMBER_4)  &RUEN BACKSLASH      &none                                            &none          &scl LEFT_CONTROL      &kp ESC            &none                &to 15
-                                                                   &none                &kp LS(N1)               &kp LS(MINUS)    &none  &mo 10         &none
+  &RUEN LS(COMMA)         &RUEN LS(BACKSLASH)  &RUEN LS(NUMBER_4)  &RUEN BACKSLASH      &RUEN LS(DOT)                                    &none          &scl LEFT_CONTROL      &kp ESC            &none                &to 15
+                                                                   &kp HASH             &RUEN LS(NUMBER_3)       &kp LS(MINUS)    &none  &mo 10         &none
             >;
         };
 
