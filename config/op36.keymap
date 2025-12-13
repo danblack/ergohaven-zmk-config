@@ -293,27 +293,27 @@
 
         NUM_EN {
             bindings = <
-  &none       &kp N7  &kp N8  &kp N9  &kp N0                           &none          &kp LS(COMMA)     &none         &kp LS(DOT)     &none
-  &kp LS(N9)  &kp N4  &kp N5  &kp N6  &kp LS(N0)                       &kp BACKSPACE  &kp LEFT_GUI      &kp LEFT_ALT  &kp LEFT_SHIFT  &kp LEFT_CONTROL
-  &kp PLUS    &kp N1  &kp N2  &kp N3  &kp DOT                          &none          &kp LEFT_CONTROL  &kp ESC       &kp DOT         &none
-                              &none   &kp MINUS   &kp EQUAL    &mo 10  &none          &none
+  &none       &kp N6        &kp NUMBER_5  &kp NUMBER_4  &kp N0                           &none          &kp LS(COMMA)     &none         &kp LS(DOT)     &none
+  &kp LS(N9)  &kp NUMBER_3  &kp NUMBER_2  &kp N1        &kp LS(N0)                       &kp BACKSPACE  &kp LEFT_GUI      &kp LEFT_ALT  &kp LEFT_SHIFT  &kp LEFT_CONTROL
+  &kp PLUS    &kp RU_N9     &kp RU_N8     &kp RU_N7     &kp DOT                          &none          &kp LEFT_CONTROL  &kp ESC       &kp DOT         &none
+                                          &none         &kp MINUS   &kp EQUAL    &mo 10  &none          &none
             >;
         };
 
         NUM_RU {
             bindings = <
-  &none       &kp N7  &kp N8  &kp N9  &kp N0                           &none          &RUEN LS(COMMA)   &none         &RUEN LS(DOT)   &none
-  &kp LS(N9)  &kp N4  &kp N5  &kp N6  &kp LS(N0)                       &kp BACKSPACE  &kp LEFT_GUI      &kp LEFT_ALT  &kp LEFT_SHIFT  &kp LEFT_CONTROL
-  &kp PLUS    &kp N1  &kp N2  &kp N3  &RUEN DOT                        &none          &kp LEFT_CONTROL  &kp ESC       &RUEN DOT       &none
-                              &none   &kp MINUS   &kp EQUAL    &mo 10  &none          &none
+  &none       &kp N6        &kp NUMBER_5  &kp NUMBER_4  &kp N0                           &none          &RUEN LS(COMMA)   &none         &RUEN LS(DOT)   &none
+  &kp LS(N9)  &kp NUMBER_3  &kp NUMBER_2  &kp N1        &kp LS(N0)                       &kp BACKSPACE  &kp LEFT_GUI      &kp LEFT_ALT  &kp LEFT_SHIFT  &kp LEFT_CONTROL
+  &kp PLUS    &kp RU_N9     &kp RU_N8     &kp RU_N7     &RUEN DOT                        &none          &kp LEFT_CONTROL  &kp ESC       &RUEN DOT       &none
+                                          &none         &kp MINUS   &kp EQUAL    &mo 10  &none          &none
             >;
         };
 
         FUN {
             bindings = <
-  &kp F12  &kp F7  &kp F8  &kp F9  &none                  &none  &kp LEFT_META     &kp LEFT_ALT  &kp LEFT_SHIFT  &kp LEFT_CONTROL
-  &kp F11  &kp F4  &kp F5  &kp F6  &none                  &none  &kp LEFT_GUI      &kp LEFT_ALT  &kp LEFT_SHIFT  &kp LEFT_CONTROL
-  &kp F10  &kp F1  &kp F2  &kp F3  &none                  &none  &kp LEFT_CONTROL  &none         &none           &none
+  &kp F12  &kp F6  &kp F5  &kp F4  &none                  &none  &kp LEFT_META     &kp LEFT_ALT  &kp LEFT_SHIFT  &kp LEFT_CONTROL
+  &kp F11  &kp F3  &kp F2  &kp F1  &none                  &none  &kp LEFT_GUI      &kp LEFT_ALT  &kp LEFT_SHIFT  &kp LEFT_CONTROL
+  &kp F10  &kp F9  &kp F8  &kp F7  &none                  &none  &kp LEFT_CONTROL  &none         &none           &none
                            &none   &none  &none    &none  &none  &none
             >;
         };
