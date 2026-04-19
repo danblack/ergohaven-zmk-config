@@ -191,6 +191,40 @@
             label = "LSCL";
         };
 
+        rscl: ru_shortcut_mod {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings =
+                <&macro_tap>,
+                <&kp LS(LG(LC(LA(E)))) &to 0>,
+                <&macro_press>,
+                <&mo 16 &macro_param_1to1 &kp MACRO_PLACEHOLDER>,
+                <&macro_pause_for_release>,
+                <&macro_release>,
+                <&mo 16 &macro_param_1to1 &kp MACRO_PLACEHOLDER>,
+                <&macro_tap>,
+                <&kp LS(LG(LC(LA(R)))) &to 2>;
+
+            label = "RU_SHORTCUT_MOD";
+        };
+
+        rlscl: ru_lscl {
+            compatible = "zmk,behavior-macro-two-param";
+            #binding-cells = <2>;
+            bindings =
+                <&macro_tap>,
+                <&kp LS(LG(LC(LA(E)))) &to 0>,
+                <&macro_press>,
+                <&macro_param_1to1 &mo MACRO_PLACEHOLDER &macro_param_2to1 &kp MACRO_PLACEHOLDER>,
+                <&macro_pause_for_release>,
+                <&macro_release>,
+                <&macro_param_2to1 &kp MACRO_PLACEHOLDER &macro_param_1to1 &mo MACRO_PLACEHOLDER>,
+                <&macro_tap>,
+                <&kp LS(LG(LC(LA(R)))) &to 2>;
+
+            label = "RU_LSCL";
+        };
+
         MORE: MORE {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
@@ -266,9 +300,9 @@
 
         LSM_RU {
             bindings = <
-  &RUEN LS(N6)            &RUEN LS(N7)         &RUEN LS(N8)        &RUEN LS(NUMBER_2)   &RUEN LS(GRAVE)                                  &mo 10         &lscl 10 LEFT_COMMAND  &lscl 10 LEFT_ALT  &lscl 10 LEFT_SHIFT  &lscl 10 LEFT_CONTROL
-  &RUEN LS(LEFT_BRACKET)  &RUEN LEFT_BRACKET   &RUEN LS(NUMBER_5)  &RUEN RIGHT_BRACKET  &RUEN LS(RIGHT_BRACKET)                          &kp BACKSPACE  &scl LEFT_GUI          &scl LEFT_ALT      &scl LEFT_SHIFT      &scl LEFT_CONTROL
-  &RUEN LS(COMMA)         &RUEN LS(BACKSLASH)  &RUEN LS(NUMBER_4)  &RUEN BACKSLASH      &RUEN LS(DOT)                                    &none          &scl LEFT_CONTROL      &kp ESC            &none                &to 15
+  &RUEN LS(N6)            &RUEN LS(N7)         &RUEN LS(N8)        &RUEN LS(NUMBER_2)   &RUEN LS(GRAVE)                                  &mo 10         &rlscl 10 LEFT_COMMAND  &rlscl 10 LEFT_ALT  &rlscl 10 LEFT_SHIFT  &rlscl 10 LEFT_CONTROL
+  &RUEN LS(LEFT_BRACKET)  &RUEN LEFT_BRACKET   &RUEN LS(NUMBER_5)  &RUEN RIGHT_BRACKET  &RUEN LS(RIGHT_BRACKET)                          &kp BACKSPACE  &rscl LEFT_GUI          &rscl LEFT_ALT      &rscl LEFT_SHIFT      &rscl LEFT_CONTROL
+  &RUEN LS(COMMA)         &RUEN LS(BACKSLASH)  &RUEN LS(NUMBER_4)  &RUEN BACKSLASH      &RUEN LS(DOT)                                    &none          &rscl LEFT_CONTROL      &kp ESC             &none                 &to 15
                                                                    &kp HASH             &RUEN LS(NUMBER_3)       &kp LS(MINUS)    &none  &mo 10         &none
             >;
         };
@@ -285,8 +319,8 @@
         RSM_RU {
             bindings = <
   &none              &none            &none          &none              &mo 11                   &RUEN LS(COMMA)  &RUEN DQT     &kp LS(N1)   &RUEN GRAVE         &none
-  &scl LEFT_CONTROL  &scl LEFT_SHIFT  &scl LEFT_ALT  &scl LEFT_GUI      &mo 11                   &kp BACKSPACE    &RUEN COLON   &kp EQUAL    &RUEN SINGLE_QUOTE  &RUEN SEMI
-  &none              &none            &none          &scl LEFT_CONTROL  &none                    &RUEN LS(DOT)    &kp LS(FSLH)  &RUEN COMMA  &RUEN DOT           &kp FSLH
+  &rscl LEFT_CONTROL  &rscl LEFT_SHIFT  &rscl LEFT_ALT  &rscl LEFT_GUI      &mo 11                   &kp BACKSPACE    &RUEN COLON   &kp EQUAL    &RUEN SINGLE_QUOTE  &RUEN SEMI
+  &none               &none             &none           &rscl LEFT_CONTROL  &none                    &RUEN LS(DOT)    &kp LS(FSLH)  &RUEN COMMA  &RUEN DOT           &kp FSLH
                                                      &none              &mo 11  &none    &TO_RU  &TO_EN           &none
             >;
         };
