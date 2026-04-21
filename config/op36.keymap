@@ -257,7 +257,7 @@
         };
 
         ENG_UP {
-            display-name = "English Uppercase";
+            display-name = "English Up";
             bindings = <
   &kp LS(Q)  &kp LS(W)  &kp LS(E)  &kp LS(R)  &kp LS(T)                                          &kp LS(Y)           &kp LS(U)  &kp LS(I)  &kp LS(O)  &kp LS(P)
   &kp LS(A)  &kp LS(S)  &kp LS(D)  &kp LS(F)  &kp LS(G)                                          &kp LS(H)           &kp LS(J)  &kp LS(K)  &kp LS(L)  &TO_RU
@@ -295,7 +295,7 @@
                                                              &none              &kp LS(NUMBER_3)       &kp LS(MINUS)    &none  &mo 10         &none
             >;
 
-            label = "LSM_EN";
+            label = "Left Sym";
         };
 
         LSM_RU {
@@ -305,6 +305,8 @@
   &RUEN LS(COMMA)         &RUEN LS(BACKSLASH)  &RUEN LS(NUMBER_4)  &RUEN BACKSLASH      &RUEN LS(DOT)                                    &none          &rscl LEFT_CONTROL      &kp ESC             &none                 &to 15
                                                                    &kp HASH             &RUEN LS(NUMBER_3)       &kp LS(MINUS)    &none  &mo 10         &none
             >;
+
+            label = "Left Sym";
         };
 
         RSM_EN {
@@ -314,15 +316,19 @@
   &none              &none            &none          &scl LEFT_CONTROL  &none                    &kp LS(DOT)    &kp LS(FSLH)  &kp COMMA   &kp DOT           &kp FSLH
                                                      &none              &mo 11  &none    &TO_RU  &TO_EN         &none
             >;
+
+            label = "Right Sym";
         };
 
         RSM_RU {
             bindings = <
-  &none              &none            &none          &none              &mo 11                   &RUEN LS(COMMA)  &RUEN DQT     &kp LS(N1)   &RUEN GRAVE         &none
+  &none               &none             &none           &none               &mo 11                   &RUEN LS(COMMA)  &RUEN DQT     &kp LS(N1)   &RUEN GRAVE         &none
   &rscl LEFT_CONTROL  &rscl LEFT_SHIFT  &rscl LEFT_ALT  &rscl LEFT_GUI      &mo 11                   &kp BACKSPACE    &RUEN COLON   &kp EQUAL    &RUEN SINGLE_QUOTE  &RUEN SEMI
   &none               &none             &none           &rscl LEFT_CONTROL  &none                    &RUEN LS(DOT)    &kp LS(FSLH)  &RUEN COMMA  &RUEN DOT           &kp FSLH
-                                                     &none              &mo 11  &none    &TO_RU  &TO_EN           &none
+                                                        &none               &mo 11  &none    &TO_RU  &TO_EN           &none
             >;
+
+            label = "Right Sym";
         };
 
         NUM_EN {
@@ -332,6 +338,8 @@
   &kp PLUS    &kp RU_N9     &kp RU_N8     &kp RU_N7     &kp DOT                          &none          &kp LEFT_CONTROL  &kp ESC       &kp DOT         &none
                                           &none         &kp MINUS   &kp EQUAL    &mo 10  &none          &none
             >;
+
+            label = "Num";
         };
 
         NUM_RU {
@@ -341,6 +349,8 @@
   &kp PLUS    &kp RU_N9     &kp RU_N8     &kp RU_N7     &RUEN DOT                        &none          &kp LEFT_CONTROL  &kp ESC       &RUEN DOT       &none
                                           &none         &kp MINUS   &kp EQUAL    &mo 10  &none          &none
             >;
+
+            label = "Num";
         };
 
         FUN {
@@ -350,6 +360,8 @@
   &kp F10  &kp F9  &kp F8  &kp F7  &none                  &none  &kp LEFT_CONTROL  &none         &none           &none
                            &none   &none  &none    &none  &none  &none
             >;
+
+            label = "Fun";
         };
 
         APP {
@@ -359,6 +371,8 @@
   &none  &none  &none  &none  &none                  &kp LA(LG(F6))         &kp LA(LG(F7))      &kp LA(LG(F8))  &kp LA(LG(F9))         &kp LA(LG(F10))
                        &none  &none  &none    &none  &none                  &none
             >;
+
+            label = "App";
         };
 
         IDE {
@@ -368,6 +382,8 @@
   &kp LS(LG(F12))  &none  &kp LG(LA(C))  &kp LG(LA(V))  &none                              &kp LS(F6)  &kp LG(LA(M))  &none          &none          &none
                                          &none          &none              &none    &none  &none       &none
             >;
+
+            label = "IDE";
         };
 
         MUS {
@@ -377,6 +393,8 @@
   &mo 17            &none           &kp LG(A)     &kp LEFT_CONTROL  &mo 17                              &none          &none           &kp ESC         &none            &none
                                                   &none             &mkp LCLK      &mkp RCLK    &mo 17  &kp ENTER      &none
             >;
+
+            label = "Mouse";
         };
 
         KAN {
@@ -418,15 +436,8 @@
   &none             &none           &kp LG(A)     &kp LEFT_CONTROL  &none                              &none          &none              &kp ESC            &none             &none
                                                   &none             &mkp LCLK      &mkp RCLK    &none  &kp ENTER      &none
             >;
-        };
 
-        layer_18 {
-            bindings = <
-  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
-  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
-  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
-                          &trans  &trans  &trans    &trans  &trans  &trans
-            >;
+            label = "Slow Mouse";
         };
     };
 };
