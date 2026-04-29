@@ -292,10 +292,10 @@
 
         LSM_EN {
             bindings = <
-  &kp LS(N6)            &kp LS(N7)         &kp LS(N8)        &kp LS(NUMBER_2)   &kp LS(GRAVE)                                  &mo 10         &lscl 10 LEFT_COMMAND  &lscl 10 LEFT_ALT  &lscl 10 LEFT_SHIFT  &lscl 10 LEFT_CONTROL
-  &kp LS(LEFT_BRACKET)  &kp LEFT_BRACKET   &kp LS(NUMBER_5)  &kp RIGHT_BRACKET  &kp LS(RIGHT_BRACKET)                          &kp BACKSPACE  &scl LEFT_GUI          &scl LEFT_ALT      &scl LEFT_SHIFT      &scl LEFT_CONTROL
-  &kp LESS_THAN         &kp LS(BACKSLASH)  &kp LS(NUMBER_4)  &kp BACKSLASH      &kp GREATER_THAN                               &none          &scl LEFT_CONTROL      &kp ESC            &none                &to 15
-                                                             &none              &kp LS(NUMBER_3)       &kp LS(MINUS)    &none  &mo 10         &none
+  &kp LS(N6)            &kp LS(N7)         &kp LS(N8)        &kp LS(NUMBER_2)   &kp LS(GRAVE)                                  &mo 10  &lscl 10 LEFT_COMMAND  &lscl 10 LEFT_ALT  &lscl 10 LEFT_SHIFT  &lscl 10 LEFT_CONTROL
+  &kp LS(LEFT_BRACKET)  &kp LEFT_BRACKET   &kp LS(NUMBER_5)  &kp RIGHT_BRACKET  &kp LS(RIGHT_BRACKET)                          &mo 17  &scl LEFT_GUI          &scl LEFT_ALT      &scl LEFT_SHIFT      &scl LEFT_CONTROL
+  &kp LESS_THAN         &kp LS(BACKSLASH)  &kp LS(NUMBER_4)  &kp BACKSLASH      &kp GREATER_THAN                               &none   &scl LEFT_CONTROL      &kp ESC            &none                &to 15
+                                                             &none              &kp LS(NUMBER_3)       &kp LS(MINUS)    &none  &mo 10  &none
             >;
 
             label = "Left Sym";
@@ -303,10 +303,10 @@
 
         LSM_RU {
             bindings = <
-  &RUEN LS(N6)            &RUEN LS(N7)         &RUEN LS(N8)        &RUEN LS(NUMBER_2)   &RUEN LS(GRAVE)                                  &mo 10         &rlscl 10 LEFT_COMMAND  &rlscl 10 LEFT_ALT  &rlscl 10 LEFT_SHIFT  &rlscl 10 LEFT_CONTROL
-  &RUEN LS(LEFT_BRACKET)  &RUEN LEFT_BRACKET   &RUEN LS(NUMBER_5)  &RUEN RIGHT_BRACKET  &RUEN LS(RIGHT_BRACKET)                          &kp BACKSPACE  &rscl LEFT_GUI          &rscl LEFT_ALT      &rscl LEFT_SHIFT      &rscl LEFT_CONTROL
-  &RUEN LS(COMMA)         &RUEN LS(BACKSLASH)  &RUEN LS(NUMBER_4)  &RUEN BACKSLASH      &RUEN LS(DOT)                                    &none          &rscl LEFT_CONTROL      &kp ESC             &none                 &to 15
-                                                                   &kp HASH             &RUEN LS(NUMBER_3)       &kp LS(MINUS)    &none  &mo 10         &none
+  &RUEN LS(N6)            &RUEN LS(N7)         &RUEN LS(N8)        &RUEN LS(NUMBER_2)   &RUEN LS(GRAVE)                                  &mo 10    &rlscl 10 LEFT_COMMAND  &rlscl 10 LEFT_ALT  &rlscl 10 LEFT_SHIFT  &rlscl 10 LEFT_CONTROL
+  &RUEN LS(LEFT_BRACKET)  &RUEN LEFT_BRACKET   &RUEN LS(NUMBER_5)  &RUEN RIGHT_BRACKET  &RUEN LS(RIGHT_BRACKET)                          &MORE 17  &rscl LEFT_GUI          &rscl LEFT_ALT      &rscl LEFT_SHIFT      &rscl LEFT_CONTROL
+  &RUEN LS(COMMA)         &RUEN LS(BACKSLASH)  &RUEN LS(NUMBER_4)  &RUEN BACKSLASH      &RUEN LS(DOT)                                    &none     &rscl LEFT_CONTROL      &kp ESC             &none                 &to 15
+                                                                   &kp HASH             &RUEN LS(NUMBER_3)       &kp LS(MINUS)    &none  &mo 10    &none
             >;
 
             label = "Left Sym";
@@ -315,7 +315,7 @@
         RSM_EN {
             bindings = <
   &none              &none            &none          &none              &mo 11                   &kp LS(COMMA)  &kp DQT       &kp LS(N1)  &kp GRAVE         &none
-  &scl LEFT_CONTROL  &scl LEFT_SHIFT  &scl LEFT_ALT  &scl LEFT_GUI      &mo 11                   &kp BACKSPACE  &kp COLON     &kp EQUAL   &kp SINGLE_QUOTE  &kp SEMI
+  &scl LEFT_CONTROL  &scl LEFT_SHIFT  &scl LEFT_ALT  &scl LEFT_GUI      &mo 17                   &kp BACKSPACE  &kp COLON     &kp EQUAL   &kp SINGLE_QUOTE  &kp SEMI
   &none              &none            &none          &scl LEFT_CONTROL  &none                    &kp LS(DOT)    &kp LS(FSLH)  &kp COMMA   &kp DOT           &kp FSLH
                                                      &none              &mo 11  &none    &TO_RU  &TO_EN         &none
             >;
@@ -325,10 +325,10 @@
 
         RSM_RU {
             bindings = <
-  &none               &none             &none           &none               &mo 11                   &RUEN LS(COMMA)  &RUEN DQT     &kp LS(N1)   &RUEN GRAVE         &none
-  &rscl LEFT_CONTROL  &rscl LEFT_SHIFT  &rscl LEFT_ALT  &rscl LEFT_GUI      &mo 11                   &kp BACKSPACE    &RUEN COLON   &kp EQUAL    &RUEN SINGLE_QUOTE  &RUEN SEMI
-  &none               &none             &none           &rscl LEFT_CONTROL  &none                    &RUEN LS(DOT)    &kp LS(FSLH)  &RUEN COMMA  &RUEN DOT           &kp FSLH
-                                                        &none               &mo 11  &none    &TO_RU  &TO_EN           &none
+  &none               &none             &none           &none               &mo 11                     &RUEN LS(COMMA)  &RUEN DQT     &kp LS(N1)   &RUEN GRAVE         &none
+  &rscl LEFT_CONTROL  &rscl LEFT_SHIFT  &rscl LEFT_ALT  &rscl LEFT_GUI      &MORE 17                   &kp BACKSPACE    &RUEN COLON   &kp EQUAL    &RUEN SINGLE_QUOTE  &RUEN SEMI
+  &none               &none             &none           &rscl LEFT_CONTROL  &none                      &RUEN LS(DOT)    &kp LS(FSLH)  &RUEN COMMA  &RUEN DOT           &kp FSLH
+                                                        &none               &mo 11    &none    &TO_RU  &TO_EN           &none
             >;
 
             label = "Right Sym";
@@ -391,9 +391,9 @@
 
         MUS {
             bindings = <
-  &TO_EN            &kp LG(X)       &kp LG(C)     &kp LG(V)         &kp LS(LC(V))                       &none          &to L_SMUS      &mmv MOVE_UP    &none            &msc MOVE_Y(20)
-  &kp LEFT_CONTROL  &kp LEFT_SHIFT  &kp LEFT_ALT  &kp LEFT_GUI      &kp LG(Z)                           &kp BACKSPACE  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc MOVE_Y(-20)
-  &mo L_SMUS        &none           &kp LG(A)     &kp LEFT_CONTROL  &mo L_SMUS                          &none          &none           &kp ESC         &none            &none
+  &TO_EN            &kp LG(X)       &kp LG(C)     &kp LG(V)         &kp LS(LC(V))                           &none          &to L_SMUS      &mmv MOVE_UP    &none            &msc MOVE_Y(20)
+  &kp LEFT_CONTROL  &kp LEFT_SHIFT  &kp LEFT_ALT  &kp LEFT_GUI      &kp LG(Z)                               &kp BACKSPACE  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc MOVE_Y(-20)
+  &mo L_SMUS        &none           &kp LG(A)     &kp LEFT_CONTROL  &mo L_SMUS                              &none          &none           &kp ESC         &none            &none
                                                   &none             &mkp LCLK      &mkp RCLK    &mo L_SMUS  &kp ENTER      &none
             >;
 
