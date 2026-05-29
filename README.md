@@ -96,35 +96,159 @@ SMUS (16) ──&to 13─────> MUS (13)
 
 ### Раскладки слоёв (ASCII)
 
-Источник истины — `config/op36.keymap`; ниже упрощённые схемы ключевых слоёв
-(op36 = 3×5 на половину + 3 больших пальца). Стрелки `↑↓←→` — движение мыши.
+Источник истины — `config/op36.keymap`; ниже схемы всех 18 слоёв (op36 = 3×5 на
+половину + 3 больших пальца, всего 36 клавиш). Большой палец показан четвёртой
+строкой: `Lt1 Lt2 Lt3 | Rt1 Rt2 Rt3`.
 
-**ENG (0)**
+**Обозначения:** `·` — пусто (`&none`). Моды — `Ctl Sft Alt Gui Cmd Meta`;
+`мод*` = sticky-вариант (`&mosk`/`&sk`/`scl`); `→N` — переход на слой N
+(`tomo→13`: тап = полный `&to`, удержание = momentary `&mo`). Мышь: `↑↓←→` —
+движение, `sc↑ sc↓` — скролл, `LC RC` — левый/правый клик. Правки буфера:
+`cut copy paste pst±` = ⌘X ⌘C ⌘V ⌘⇧V; `undo redo selA` = ⌘Z ⌘⇧Z ⌘A.
+RU-двойники слоёв (`LSM_RU`/`RSM_RU`/`NUM_RU`) печатают те же символы, что
+EN-версии, но через временное переключение раскладки (макрос `RUEN`).
+
+**ENG (0)** — база
 
 ```
 Q  W  E  R  T  |  Y  U  I  O  P
 A  S  D  F  G  |  H  J  K  L  ;
 Z  X  C  V  B  |  N  M  ,  .  /
-      NUM  NAV/Spc  GUI | ALT  SHFT  NAV
+       →8  NAV/Spc  Gui→6 | Alt→4  Sft→8  →3
 ```
 
-**MUS (13) — мышь**
+**ENG_UP (1)** — заглавные (Shift залочен) + переход на RU
 
 ```
-TO_EN  cut  copy  paste  paste+  |  ·       →SMUS   ↑       ·      scrl↑
-LCTRL  LSFT LALT  LGUI   undo    |  BSPC    ←       ↓       →      scrl↓
-→SMUS  ·    selА  LCTRL  →SMUS   |  ·       ·       ESC     ·      ·
-              ·  LClick  RClick  | →SMUS  ENTER  ·
+Q  W  E  R  T  |  Y  U  I  O  P      (всё с Shift)
+A  S  D  F  G  |  H  J  K  L  →RUS
+Z  X  C  V  B  |  N  M  →RUS →RUS →RUS
+       →8  NAV/Spc  Gui→6 | Alt→4  Sft→8  →3
 ```
 
-**SMUS (16) — медленная/точная мышь**
+**RUS (2)** — ЙЦУКЕН через системную раскладку
 
 ```
-TO_EN  cut  copy  paste  paste+ |  ·       ·       ↑(сл.)  →MUS    scrl↑
-LCTRL  LSFT LALT  LGUI   undo   |  BSPC    ←(сл.)  ↓(сл.)  →(сл.)  scrl↓
-·      ·    selА  LCTRL  ·      |  ·       ·       ESC     ·       ·
-              ·  LClick  RClick |  ·     ENTER  ·
+Q  W  E  R  Т/Э | Y  U  Ш/Щ P  [
+A  S  D  F  G   | H  J  K   L  ;
+Z  X  C  V  B   | Ь/Ъ ,  .  '
+       →9  NAV/Spc  Gui→7 | Alt→5  Sft→9  →3
 ```
+`ru_e`/`ru_sh`/`ru_mz` — mod-morph: с зажатым Alt дают второй символ (Э/Щ/Ъ).
+
+**NAV (3)** — навигация
+
+```
+redo cut copy paste pst± | ·     Home   ↑    End  PgUp
+Ctl  Sft Alt  Gui   undo | BSPC  ←      ↓    →    PgDn
+→MUS ·   selA Ctl   Esc  | Caps  →ENG_UP Esc Del  ·
+                ·  ·  →11 | Tab   Enter  ·
+```
+`→MUS` = `&tomo 13 13` (тап — полное переключение, удержание — momentary).
+
+**LSM_EN (4)** — левые символы (RU-двойник: LSM_RU 5)
+
+```
+^  &  *  @  ~ | →10  Cmd*  Alt*  Sft*  Ctl*
+{  [  %  ]  } | BSPC Gui*  Alt*  Sft*  Ctl*
+<  |  $  \  > | ·    Ctl*  Esc   ·     →15
+            ·  #  _ | ·  →10  ·
+```
+Правые моды — `scl`/`lscl` (мод + временный слой шорткатов 10/17).
+
+**RSM_EN (6)** — правые символы (RU-двойник: RSM_RU 7)
+
+```
+·    ·    ·    ·    →11 | <  "  !  `  ·
+Ctl* Sft* Alt* Gui* →11 | BSPC :  =  '  ;
+·    ·    ·    Ctl* ·    | >  ?  ,  .  /
+                ·  →11 · | TO_RU TO_EN ·
+```
+
+**NUM_EN (8)** — цифры (RU-двойник: NUM_RU 9)
+
+```
+·  6  5  4  0 | ·    <   ·   >   ·
+(  3  2  1  ) | BSPC Gui Alt Sft Ctl
++  9  8  7  . | ·    Ctl Esc .   ·
+            ·  -  = | →10  ·  ·
+```
+
+**FUN (10)** — функциональные клавиши
+
+```
+F12 F6 F5 F4 · | ·  Meta Alt Sft Ctl
+F11 F3 F2 F1 · | ·  Gui  Alt Sft Ctl
+F10 F9 F8 F7 · | ·  Ctl  ·   ·   ·
+            ·  ·  · | ·  ·  ·
+```
+
+**APP (11)** — глобальные хоткеи запуска/переключения приложений (macOS)
+
+```
+· · · · · | ⌃⌥⇧⌘Y ⌘⌥Esc ⌘⌥0  ⌥⌃⌘⇧O ⌃⌘Spc
+· · · · · | ⌘⌥F1  ⌘⌥F2  ⌘⌥F3 ⌘⌥F4  ⌘⌥F5
+· · · · · | ⌥⌘F6  ⌥⌘F7  ⌥⌘F8 ⌥⌘F9  ⌥⌘F10
+          ·  ·  · | ·  ·  ·
+```
+
+**IDE (12)** — хоткеи IDE *(не привязан биндингами — только ZMK Studio)*
+
+```
+·     ·  ⌃F1  ⌃⌥R  ⌃⌘⌥T | ⌘F2 ⌥F7  ⌘⌥B ·    ⌘F8
+⌘⇧A   ·  ⌘O   ⌘⇧F  ⇧⌘O  | ·    ⌃⇧J  ·   ⌘⌃L  ·
+⇧⌘F12 ·  ⌘⌥C  ⌘⌥V  ·    | ⇧F6  ⌘⌥M  ·   ·    ·
+              ·  ·  · | ·  ·
+```
+
+**MUS (13)** — мышь
+
+```
+TO_EN cut  copy paste pst±  | ·     →SMUS  ↑    ·     sc↑
+Ctl   Sft  Alt  Gui   undo  | BSPC  ←      ↓    →     sc↓
+→SMUS ·    selA Ctl   →SMUS | ·     ·      ESC  ·     ·
+                ·  LC  RC | →SMUS Enter ·
+```
+
+**KAN (14)** — режим Kanata, чистый QWERTY *(не привязан — только ZMK Studio)*
+
+```
+Q→15 W  E  R  T | Y  U  I  O  P
+A    S  D  F  G | H  J  K  L  ;
+Z    X  C  V  B | N  M  ,  .  /
+        Esc Spc Gui | Alt Sft Ctl
+```
+`Q→15`: тап — Q, удержание — слой SETUP.
+
+**SETUP (15)** — BT/USB, медиа, питание
+
+```
+TO_EN · · · · | BT0  BT1  BT2  BT3  BTclr
+·     · · · · | →BLE Vol- Mute Vol+ RGui
+·     · · · · | →USB Prev Play Next unlock
+            ·  ·  · | ·  ·
+```
+`→BLE`/`→USB` — `&out`; `unlock` — `&studio_unlock`.
+
+**SMUS (16)** — медленная/точная мышь
+
+```
+TO_EN cut copy paste pst±  | ·     ·       ↑(сл.) →MUS    sc↑
+Ctl   Sft Alt  Gui   undo  | BSPC  ←(сл.)  ↓(сл.) →(сл.)  sc↓
+·     ·   selA Ctl   ·     | ·     ·       ESC    ·       ·
+                ·  LC  RC | ·  Enter ·
+```
+
+**SHOTCUTS (17)** — буквы с home-row-mods (momentary, из символьных слоёв)
+
+```
+Q  W  E  R  T | Y  U  I  O  P
+A  S  D  F  G | H  J  K  L  ;
+Z  X  C  V  B | N  M  ,  .  /
+          ·  Spc · | Tab Enter ·
+```
+Hold домашнего ряда: слева `A`=Ctl `S`=Sft `D`=Alt `F`=Gui; справа `J`=Gui
+`K`=Alt `L`=Sft `;`=Ctl. Дополнительно `V` и `M` на удержании — Ctl.
 
 ### Мышиный слой
 
