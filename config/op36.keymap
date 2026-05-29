@@ -140,8 +140,12 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "hold-preferred";
-            tapping-term-ms = <200>;
-            quick-tap-ms = <175>;
+
+            // Без привязки к таймингам: огромный tapping-term фактически отключает
+            // таймаут, поэтому hold/tap решается не временем, а нажатием другой
+            // клавиши. Нажал клавишу мыши -> momentary-слой (&mo); одиночный тап
+            // любой длительности без других клавиш -> полное переключение (&to).
+            tapping-term-ms = <60000>;
             bindings = <&mo>, <&to>;
 
             label = "TOMO";
