@@ -135,6 +135,17 @@
             hold-trigger-on-release;
             hold-trigger-key-positions = <5 15 16 6 5 6 7 8 9 15 16 17 18 19 25 26 27 28 29 33 34 35>;
         };
+
+        tomo: to_mo_layer {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <175>;
+            bindings = <&mo>, <&to>;
+
+            label = "TOMO";
+        };
     };
 
     combos { compatible = "zmk,combos"; };
@@ -283,7 +294,7 @@
             bindings = <
   &kp LG(LS(Z))     &kp LG(X)       &kp LG(C)     &kp LG(V)         &kp LC(LS(V))                     &kp RU_NUMERO  &kp HOME        &kp UP      &kp END     &kp PAGE_UP
   &kp LEFT_CONTROL  &kp LEFT_SHIFT  &kp LEFT_ALT  &kp LEFT_GUI      &kp LG(Z)                         &kp BACKSPACE  &kp LEFT_ARROW  &kp DOWN    &kp RIGHT   &kp PAGE_DOWN
-  &to 13            &none           &kp LG(A)     &kp LEFT_CONTROL  &kp ESC                           &kp CAPSLOCK   &TO_EN_UP       &kp ESCAPE  &kp DELETE  &none
+  &tomo 13 13       &none           &kp LG(A)     &kp LEFT_CONTROL  &kp ESC                           &kp CAPSLOCK   &TO_EN_UP       &kp ESCAPE  &kp DELETE  &none
                                                   &none             &none          &mo 11    &kp TAB  &kp ENTER      &none
             >;
 
