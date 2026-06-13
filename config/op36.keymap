@@ -308,10 +308,10 @@
 
         LSM_EN {
             bindings = <
-  &kp LS(N6)            &kp LS(N7)         &kp LS(N8)        &kp LS(NUMBER_2)   &kp LS(GRAVE)                                  &mo 17  &lscl 17 LEFT_COMMAND  &lscl 17 LEFT_ALT  &lscl 17 LEFT_SHIFT  &lscl 17 LEFT_CONTROL
-  &kp LS(LEFT_BRACKET)  &kp LEFT_BRACKET   &kp LS(NUMBER_5)  &kp RIGHT_BRACKET  &kp LS(RIGHT_BRACKET)                          &none   &kp LEFT_GUI           &kp LEFT_ALT       &kp LEFT_SHIFT       &kp LEFT_CONTROL
-  &kp LESS_THAN         &kp LS(BACKSLASH)  &kp LS(NUMBER_4)  &kp BACKSLASH      &kp GREATER_THAN                               &none   &scl LEFT_CONTROL      &kp ESC            &none                &to 15
-                                                             &none              &kp LS(NUMBER_3)       &kp LS(MINUS)    &none  &mo 10  &none
+  &kp LS(N6)            &kp LS(N7)         &kp LS(N8)        &kp LS(NUMBER_2)   &kp LS(GRAVE)                                  &mo 17         &lscl 17 LEFT_COMMAND  &lscl 17 LEFT_ALT  &lscl 17 LEFT_SHIFT  &lscl 17 LEFT_CONTROL
+  &kp LS(LEFT_BRACKET)  &kp LEFT_BRACKET   &kp LS(NUMBER_5)  &kp RIGHT_BRACKET  &kp LS(RIGHT_BRACKET)                          &kp BACKSPACE  &kp LEFT_GUI           &kp LEFT_ALT       &kp LEFT_SHIFT       &kp LEFT_CONTROL
+  &kp LESS_THAN         &kp LS(BACKSLASH)  &kp LS(NUMBER_4)  &kp BACKSLASH      &kp GREATER_THAN                               &none          &scl LEFT_CONTROL      &kp ESC            &none                &to 15
+                                                             &none              &kp LS(NUMBER_3)       &kp LS(MINUS)    &none  &mo 10         &none
             >;
 
             label = "Left Sym";
@@ -319,10 +319,10 @@
 
         LSM_RU {
             bindings = <
-  &RUEN LS(N6)            &RUEN LS(N7)         &RUEN LS(N8)        &RUEN LS(NUMBER_2)   &RUEN LS(GRAVE)                                  &MORE 17  &rlscl 17 LEFT_COMMAND  &rlscl 17 LEFT_ALT  &rlscl 17 LEFT_SHIFT  &rlscl 17 LEFT_CONTROL
-  &RUEN LS(LEFT_BRACKET)  &RUEN LEFT_BRACKET   &RUEN LS(NUMBER_5)  &RUEN RIGHT_BRACKET  &RUEN LS(RIGHT_BRACKET)                          &MORE 17  &rscl LEFT_GUI          &rscl LEFT_ALT      &rscl LEFT_SHIFT      &rscl LEFT_CONTROL
-  &RUEN LS(COMMA)         &RUEN LS(BACKSLASH)  &RUEN LS(NUMBER_4)  &RUEN BACKSLASH      &RUEN LS(DOT)                                    &none     &rscl LEFT_CONTROL      &kp ESC             &none                 &to 15
-                                                                   &kp HASH             &RUEN LS(NUMBER_3)       &kp LS(MINUS)    &none  &mo 10    &none
+  &RUEN LS(N6)            &RUEN LS(N7)         &RUEN LS(N8)        &RUEN LS(NUMBER_2)   &RUEN LS(GRAVE)                                  &MORE 17       &rlscl 17 LEFT_COMMAND  &rlscl 17 LEFT_ALT  &rlscl 17 LEFT_SHIFT  &rlscl 17 LEFT_CONTROL
+  &RUEN LS(LEFT_BRACKET)  &RUEN LEFT_BRACKET   &RUEN LS(NUMBER_5)  &RUEN RIGHT_BRACKET  &RUEN LS(RIGHT_BRACKET)                          &kp BACKSPACE  &rlscl 4 LEFT_COMMAND   &rlscl 4 LEFT_ALT   &rlscl 4 LEFT_SHIFT   &rlscl 4 LEFT_CONTROL
+  &RUEN LS(COMMA)         &RUEN LS(BACKSLASH)  &RUEN LS(NUMBER_4)  &RUEN BACKSLASH      &RUEN LS(DOT)                                    &none          &rlscl 4 LEFT_CONTROL   &kp ESC             &none                 &to 15
+                                                                   &kp HASH             &RUEN LS(NUMBER_3)       &kp LS(MINUS)    &none  &mo 10         &none
             >;
 
             label = "Left Sym";
@@ -342,8 +342,8 @@
         RSM_RU {
             bindings = <
   &rlscl 17 LEFT_CONTROL  &rlscl 17 LEFT_SHIFT  &rlscl 17 LEFT_ALT  &rlscl 17 LEFT_COMMAND  &MORE 17                   &RUEN LS(COMMA)  &RUEN DQT     &kp LS(N1)   &RUEN GRAVE         &none
-  &rscl LEFT_CONTROL      &rscl LEFT_SHIFT      &rscl LEFT_ALT      &rscl LEFT_GUI          &MORE 11                   &kp BACKSPACE    &RUEN COLON   &kp EQUAL    &RUEN SINGLE_QUOTE  &RUEN SEMI
-  &none                   &none                 &none               &rscl LEFT_CONTROL      &none                      &RUEN LS(DOT)    &kp LS(FSLH)  &RUEN COMMA  &RUEN DOT           &kp FSLH
+  &rlscl 6 LEFT_CONTROL   &rlscl 6 LEFT_SHIFT   &rlscl 6 LEFT_ALT   &rlscl 6 LEFT_COMMAND   &MORE 11                   &kp BACKSPACE    &RUEN COLON   &kp EQUAL    &RUEN SINGLE_QUOTE  &RUEN SEMI
+  &none                   &none                 &none               &rlscl 6 LEFT_CONTROL   &none                      &RUEN LS(DOT)    &kp LS(FSLH)  &RUEN COMMA  &RUEN DOT           &kp FSLH
                                                                     &none                   &mo 11    &none    &TO_RU  &TO_EN           &none
             >;
 
