@@ -452,9 +452,9 @@
         SHOTCUTS {
             display-name = "Shortcuts";
             bindings = <
-  &kp Q                &kp W              &kp E            &kp R                &kp T                        &kp Y      &kp U                &kp I            &kp O              &kp P
-  &hml LEFT_CONTROL A  &hml LEFT_SHIFT S  &hml LEFT_ALT D  &hml LEFT_GUI F      &kp G                        &kp H      &hmr LEFT_GUI J      &hmr LEFT_ALT K  &hmr LEFT_SHIFT L  &hmr LEFT_CONTROL SEMI
-  &kp Z                &kp X              &kp C            &hml LEFT_CONTROL V  &kp B                        &kp N      &hmr LEFT_CONTROL M  &kp COMMA        &kp DOT            &kp FSLH
+  &hml LEFT_CONTROL Q  &hml LEFT_SHIFT W  &hml LEFT_ALT E  &hml LEFT_COMMAND R  &kp T                        &kp Y      &hmr LEFT_COMMAND U  &hmr LEFT_ALT I  &hmr LEFT_SHIFT O  &hmr LEFT_CONTROL P
+  &kp A                &kp S              &kp D            &kp F                &kp G                        &kp H      &kp J                &kp K            &kp L              &kp SEMI
+  &kp Z                &kp X              &kp C            &kp V                &kp B                        &kp N      &kp M                &kp COMMA        &kp DOT            &kp FSLH
                                                            &none                &kp SPACE  &none    &kp TAB  &kp ENTER  &none
             >;
         };
